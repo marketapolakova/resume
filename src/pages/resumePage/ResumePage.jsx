@@ -4,6 +4,9 @@ import Timeline from "../../components/timeline/Timeline";
 import { education, work, certification } from "../../data/resumeData";
 
 const ResumePage = () => {
+  let delayw = 1;
+  let delaye = 1;
+  let delayc = 1;
   return (
     <div>
       <div className="mx-5 my-5">
@@ -15,12 +18,15 @@ const ResumePage = () => {
             <hr />
             {work.map((w, index) => {
               return (
-                <Timeline
-                  key={index}
-                  date={w.date}
-                  organization={w.organization}
-                  filed={w.field}
-                />
+                <div>
+                  <Timeline
+                    delay={delayw++}
+                    key={index}
+                    date={w.date}
+                    organization={w.organization}
+                    filed={w.field}
+                  />
+                </div>
               );
             })}
           </div>
@@ -30,6 +36,7 @@ const ResumePage = () => {
             {education.map((s, index) => {
               return (
                 <Timeline
+                  delay={delaye++}
                   key={index}
                   date={s.date}
                   organization={s.organization}
@@ -45,6 +52,7 @@ const ResumePage = () => {
             {certification.map((c, index) => {
               return (
                 <Timeline
+                  delay={delayc++}
                   key={index}
                   date={c.date}
                   organization={c.organization}

@@ -4,6 +4,12 @@ import { frontend, other, ui, office, cms } from "../../data/skillsData";
 import Skills from "../../components/skills/Skills";
 
 const SkillsPage = () => {
+  let delayf = 1;
+  let delayu = 1;
+  let delayc = 1;
+  let delaym = 1;
+  let delayo = 1;
+
   return (
     <div>
       <div className="mx-5 my-5">
@@ -15,7 +21,12 @@ const SkillsPage = () => {
             <hr />
             {frontend.map((skills, index) => {
               return (
-                <Skills key={index} skills={skills.name} icon={skills.icon} />
+                <Skills
+                  key={index}
+                  skills={skills.name}
+                  icon={skills.icon}
+                  delay={delayf++}
+                />
               );
             })}
           </div>
@@ -24,7 +35,12 @@ const SkillsPage = () => {
             <hr />
             {ui.map((skills, index) => {
               return (
-                <Skills key={index} skills={skills.name} icon={skills.icon} />
+                <Skills
+                  key={index}
+                  skills={skills.name}
+                  icon={skills.icon}
+                  delay={delayu++}
+                />
               );
             })}
           </div>
@@ -33,7 +49,12 @@ const SkillsPage = () => {
             <hr />
             {cms.map((skills, index) => {
               return (
-                <Skills key={index} skills={skills.name} icon={skills.icon} />
+                <Skills
+                  key={index}
+                  skills={skills.name}
+                  icon={skills.icon}
+                  delay={delayc++}
+                />
               );
             })}
           </div>
@@ -42,7 +63,12 @@ const SkillsPage = () => {
             <hr />
             {office.map((skills, index) => {
               return (
-                <Skills key={index} skills={skills.name} icon={skills.icon} />
+                <Skills
+                  key={index}
+                  skills={skills.name}
+                  icon={skills.icon}
+                  delay={delaym++}
+                />
               );
             })}
           </div>
@@ -51,7 +77,12 @@ const SkillsPage = () => {
             <hr />
             {other.map((skills, index) => {
               return (
-                <Skills key={index} skills={skills.name} icon={skills.icon} />
+                <Skills
+                  key={index}
+                  skills={skills.name}
+                  icon={skills.icon}
+                  delay={delayo++}
+                />
               );
             })}
           </div>

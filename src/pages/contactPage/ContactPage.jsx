@@ -13,10 +13,11 @@ const ContactPage = () => {
     <div>
       <div className="homePage p-5">
         <div className="row m-5">
-          <div className="col pt-5">
+          <div className="col pt-5 slide-in-right ">
             <h1>Kontakt</h1>
-            <div className="heading-line pb-4"></div>
-
+          </div>
+          <div className="heading-line pb-4"></div>
+          <div className="fade-in-delay">
             <p className="fs-6 lh pt-3 ">
               <BsTelephoneFill />{" "}
               <a href="tel:+420722308762"> +420 722 308 762</a>
@@ -27,13 +28,13 @@ const ContactPage = () => {
                 polakovamarketa@email.cz
               </a>
             </p>
+            <p className="fs-6 lh pt-3 ">
+              <BsLinkedin /> <a href="http://">LinkedIn</a>
+            </p>{" "}
+            <p className="fs-6 lh pt-3 ">
+              <BsGithub /> <a href="http://">GitHub</a>
+            </p>
           </div>
-          <p className="fs-6 lh pt-3 ">
-            <BsLinkedin /> <a href="http://">LinkedIn</a>
-          </p>{" "}
-          <p className="fs-6 lh pt-3 ">
-            <BsGithub /> <a href="http://">GitHub</a>
-          </p>
         </div>
       </div>
       <Navbar />
