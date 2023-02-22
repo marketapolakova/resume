@@ -18,7 +18,7 @@ const Timeline = ({ date, organization, filed, adition, link }) => {
                   <p>{adition}</p>
                 ) : (
                   <p>
-                    <a href={link} target="_blank">
+                    <a href={link} target="_blank" rel="noreferrer">
                       {" "}
                       {adition}
                     </a>
