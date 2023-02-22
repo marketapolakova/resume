@@ -36,8 +36,8 @@ const ContactPage = () => {
             </p>
           </div>
         </div>
+        <Navbar bgCol={"#fff"} />
       </div>
-      <Navbar />
     </div>
   );
 };

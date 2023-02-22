@@ -9,12 +9,17 @@ const HomePage = () => {
       <div className="homePage p-5">
         <div className="row m-5">
           <div className="col pt-5">
-            <h1 className="heading slide-in-left ">Markéta</h1>
-            <div className="px-5 mx-5">
-              <h1 className="px-5 pb-3 heading slide-in-right ">Poláková</h1>
+            <div className="d-none d-sm-block">
+              <h1 className="heading slide-in-left ">Markéta</h1>
+              <div className="px-5 mx-5">
+                <h1 className="px-5 pb-3 heading slide-in-right ">Poláková</h1>
+              </div>
+            </div>
+            <div className="d-sm-none">
+              <h1>Markét Poláková</h1>
             </div>
 
-            <p className="fs-6 lh pt-3 heading-line fade-in-delay">
+            <p className=" pt-3 heading-line fade-in-delay">
               Vystudovala jsem cestovní ruch, ale v období pandemie jsem našla
               zálibu v IT odvětví. Z tohoto důvodu, jsem se rozhodla změnit
               zaměření a zahájit studium oboru softwarový vývoj na vysoké škole.
@@ -26,8 +31,8 @@ const HomePage = () => {
             <ImageComponent className="p-2" />
           </div>
         </div>
+        <Navbar bgCol={"#fff"} />
       </div>
-      <Navbar />
     </div>
   );
 };

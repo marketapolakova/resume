@@ -5,7 +5,7 @@ const ImageComponent = () => {
   return (
     <div>
       <img
-        className="imageSquare"
+        className="imageSquare "
         src="images/profilePic.jpeg"
         alt=""
         style={{ width: "25rem", height: "25rem" }}
