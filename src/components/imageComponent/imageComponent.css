@@ -1,3 +1,45 @@
 .imageSquare {
   filter: drop-shadow(20px 10px 2px #000000);
 }
+
+.container {
+  position: relative;
+}
+
+.portfolio {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: 0.5s ease;
+  backface-visibility: f;
+}
+
+.middle {
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container:hover .portfolio {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: #e4e2db;
+  color: black;
+  font-size: 16px;
+  padding: 16px 18px;
+}
+.overlay:hover {
+  background-color: #000000;
+}

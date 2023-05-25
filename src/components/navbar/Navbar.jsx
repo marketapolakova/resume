@@ -23,11 +23,11 @@ const Navbar = ({ bgCol }) => {
           Dovednosti
         </a>
       </strong>
-      {/* <strong>
-        <a className="navbar-line px-3" href="/">
+      <strong>
+        <a className="navbar-line px-3" href="/portfolio">
           Portfolio{" "}
         </a>
-      </strong> */}
+      </strong>
       <strong>
         <a href="/contact" className="px-3">
           Kontakt{" "}

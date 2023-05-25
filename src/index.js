@@ -8,6 +8,7 @@ import HomePage from "./pages/homePage/HomePage";
 import ResumePage from "./pages/resumePage/ResumePage";
 import SkillsPage from "./pages/skillsPage/SkillsPage";
 import ContactPage from "./pages/contactPage/ContactPage";
+import PortfolioPage from "./pages/portfolioPage/PortfolioPage";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -18,6 +19,7 @@ root.render(
           <Route path="/" element={<HomePage />} />
           <Route path="/resume" element={<ResumePage />} />
           <Route path="/skills" element={<SkillsPage />} />
+          <Route path="/portfolio" element={<PortfolioPage />} />
           <Route path="/contact" element={<ContactPage />} />
         </Route>
       </Routes>
