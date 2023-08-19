@@ -8,13 +8,13 @@ import {
   BsFillEnvelopeFill,
 } from "react-icons/bs";
 
-const ContactPage = () => {
+const ContactPage = ({ en }) => {
   return (
     <div>
       <div className="homePage p-5">
         <div className="row m-5">
           <div className="col pt-5 slide-in-right ">
-            <h1>Kontakt</h1>
+            <h1>{en ? "Contact" : "Kontakt"} </h1>
           </div>
           <div className="heading-line pb-4"></div>
           <div className="fade-in-delay">
@@ -36,7 +36,7 @@ const ContactPage = () => {
             </p>
           </div>
         </div>
-        <Navbar bgCol={"#fff"} />
+        <Navbar link="/contact" en={en && true} bgCol={"#fff"} />
       </div>
     </div>
   );

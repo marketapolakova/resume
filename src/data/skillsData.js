@@ -62,25 +62,49 @@ export const office = [
     icon: "https://cdn-icons-png.flaticon.com/512/732/732066.png",
   },
 ];
-export const other = [
-  {
-    name: "Jira",
-    icon: "https://cdn-icons-png.flaticon.com/512/5968/5968842.png",
-  },
-  {
-    name: "Confluence",
-    icon: "https://cdn-icons-png.flaticon.com/512/5968/5968748.png",
-  },
-  {
-    name: "Anglický jazyk",
-    icon: "https://cdn-icons-png.flaticon.com/512/1378/1378036.png",
-  },
-  {
-    name: "Řidičksý průkaz skupiny B",
-    icon: "https://cdn-icons-png.flaticon.com/512/9316/9316871.png",
-  },
-  {
-    name: "Psaní všemi deset",
-    icon: "https://cdn-icons-png.flaticon.com/512/8548/8548224.png",
-  },
-];
+export const other = {
+  cz: [
+    {
+      name: "Jira",
+      icon: "https://cdn-icons-png.flaticon.com/512/5968/5968842.png",
+    },
+    {
+      name: "Confluence",
+      icon: "https://cdn-icons-png.flaticon.com/512/5968/5968748.png",
+    },
+    {
+      name: "Anglický jazyk",
+      icon: "https://cdn-icons-png.flaticon.com/512/1378/1378036.png",
+    },
+    {
+      name: "Řidičský průkaz skupiny B",
+      icon: "https://cdn-icons-png.flaticon.com/512/9316/9316871.png",
+    },
+    {
+      name: "Psaní všemi deset",
+      icon: "https://cdn-icons-png.flaticon.com/512/8548/8548224.png",
+    },
+  ],
+  en: [
+    {
+      name: "Jira",
+      icon: "https://cdn-icons-png.flaticon.com/512/5968/5968842.png",
+    },
+    {
+      name: "Confluence",
+      icon: "https://cdn-icons-png.flaticon.com/512/5968/5968748.png",
+    },
+    {
+      name: "English",
+      icon: "https://cdn-icons-png.flaticon.com/512/1378/1378036.png",
+    },
+    {
+      name: "Driving license category B",
+      icon: "https://cdn-icons-png.flaticon.com/512/9316/9316871.png",
+    },
+    {
+      name: "Typing with all ten fingers",
+      icon: "https://cdn-icons-png.flaticon.com/512/8548/8548224.png",
+    },
+  ],
+};

@@ -3,7 +3,7 @@ import ImageComponent from "../../components/imageComponent/ImageComponent";
 import "./HomePage.css";
 import Navbar from "../../components/navbar/Navbar";
 
-const HomePage = () => {
+const HomePage = ({ en }) => {
   return (
     <div>
       <div className="homePage p-5">
@@ -18,20 +18,29 @@ const HomePage = () => {
             <div className="d-sm-none">
               <h1>Markét Poláková</h1>
             </div>
-
-            <p className=" pt-3 heading-line fade-in-delay">
-              Vystudovala jsem cestovní ruch, ale v období pandemie jsem našla
-              zálibu v IT odvětví. Z tohoto důvodu, jsem se rozhodla změnit
-              zaměření a zahájit studium oboru softwarový vývoj na vysoké škole.
-              Aktuálně pracuji ve společnosti Unicorn na pozici frontend
-              developer.
-            </p>
+            {en ? (
+              <p className=" pt-3 heading-line fade-in-delay">
+                I graduated in tourism, but during the pandemic, I found an
+                interest in the IT sector. For this reason, I decided to change
+                my focus and start studying software development at a
+                university. Currently, I work at Unicorn company as a frontend
+                developer.
+              </p>
+            ) : (
+              <p className=" pt-3 heading-line fade-in-delay">
+                Vystudovala jsem cestovní ruch, ale v období pandemie jsem našla
+                zálibu v IT odvětví. Z tohoto důvodu, jsem se rozhodla změnit
+                zaměření a zahájit studium oboru softwarový vývoj na vysoké
+                škole. Aktuálně pracuji ve společnosti Unicorn na pozici
+                frontend developer.
+              </p>
+            )}
           </div>
           <div className="col d-flex flex-row-reverse fade-in">
             <ImageComponent className="p-2" />
           </div>
         </div>
-        <Navbar bgCol={"#fff"} />
+        <Navbar link={en ? "/" : ""} en={en && true} bgCol={"#fff"} />
       </div>
     </div>
   );

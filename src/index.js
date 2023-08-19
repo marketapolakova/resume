@@ -9,6 +9,9 @@ import ResumePage from "./pages/resumePage/ResumePage";
 import SkillsPage from "./pages/skillsPage/SkillsPage";
 import ContactPage from "./pages/contactPage/ContactPage";
 import PortfolioPage from "./pages/portfolioPage/PortfolioPage";
+import VirtualApp from "./pages/caseStudies/VirtualApp";
+import DanceClasses from "./pages/caseStudies/DanceClasses";
+import SaveAndBudgetApp from "./pages/caseStudies/SaveAndBudgetApp";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -21,6 +24,30 @@ root.render(
           <Route path="/skills" element={<SkillsPage />} />
           <Route path="/portfolio" element={<PortfolioPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/case-study/virtual-app" element={<VirtualApp />} />
+          <Route path="/case-study/dance-classes" element={<DanceClasses />} />
+          <Route
+            path="/case-study/save-and-budget"
+            element={<SaveAndBudgetApp />}
+          />
+
+          <Route path="/en" element={<HomePage en={true} />} />
+          <Route path="/resume/en" element={<ResumePage en={true} />} />
+          <Route path="/skills/en" element={<SkillsPage en={true} />} />
+          <Route path="/portfolio/en" element={<PortfolioPage en={true} />} />
+          <Route path="/contact/en" element={<ContactPage en={true} />} />
+          <Route
+            path="/case-study/virtual-app/en"
+            element={<VirtualApp en={true} />}
+          />
+          <Route
+            path="/case-study/dance-classes/en"
+            element={<DanceClasses en={true} />}
+          />
+          <Route
+            path="/case-study/save-and-budget/en"
+            element={<SaveAndBudgetApp en={true} />}
+          />
         </Route>
       </Routes>
     </BrowserRouter>

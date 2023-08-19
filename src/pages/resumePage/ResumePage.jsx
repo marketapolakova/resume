@@ -1,22 +1,37 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../../components/navbar/Navbar";
 import Timeline from "../../components/timeline/Timeline";
 import { education, work, certification } from "../../data/resumeData";
 
-const ResumePage = () => {
-  let delayw = 1;
-  let delaye = 1;
-  let delayc = 1;
+const ResumePage = ({ en }) => {
+  let delayw = 2;
+  let delaye = 2;
+  let delayc = 2;
+  const [translate, setTranslate] = useState({
+    work: work.cz,
+    education: education.cz,
+    certification: certification.cz,
+  });
+
+  useEffect(() => {
+    if (en) {
+      setTranslate({
+        work: work.en,
+        education: education.en,
+        certification: certification.en,
+      });
+    }
+  }, [en]);
   return (
     <div>
       <div className="mx-5 my-5">
-        <h1>Resume</h1>
+        <h1 className="slide-in-right">Resume</h1>
         <div className="heading-line pb-4"></div>
         <div className="row">
           <div className="col">
-            <h4>Pracovní zkušenosti</h4>
+            <h4>{en ? "Work experiences" : "Pracovní zkušenosti"}</h4>
             <hr />
-            {work.map((w, index) => {
+            {translate.work.map((w, index) => {
               return (
                 <div>
                   <Timeline
@@ -31,9 +46,9 @@ const ResumePage = () => {
             })}
           </div>
           <div className="col">
-            <h4>Vzdělání</h4>
+            <h4>{en ? "Education" : "Vzdělání"}</h4>
             <hr />
-            {education.map((s, index) => {
+            {translate.education.map((s, index) => {
               return (
                 <Timeline
                   delay={delaye++}
@@ -47,9 +62,9 @@ const ResumePage = () => {
             })}
           </div>
           <div className="col">
-            <h4>Certifikace</h4>
+            <h4>{en ? "Certification" : "Certifikace"}</h4>
             <hr />
-            {certification.map((c, index) => {
+            {translate.certification.map((c, index) => {
               return (
                 <Timeline
                   delay={delayc++}
@@ -57,7 +72,7 @@ const ResumePage = () => {
                   date={c.date}
                   organization={c.organization}
                   filed={c.field}
-                  adition={"Prověření"}
+                  adition={en ? "Credentials" : "Prověření"}
                   link={c.link}
                 />
               );
@@ -65,7 +80,7 @@ const ResumePage = () => {
           </div>
         </div>
       </div>
-      <Navbar bgCol={"#e5e2db"} />
+      <Navbar link="/resume" en={en && true} bgCol={"#e5e2db"} />
     </div>
   );
 };
