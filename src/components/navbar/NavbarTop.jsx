@@ -13,15 +13,13 @@ const NavbarTop = () => {
       >
         <Container fluid>
           <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${"md"}`} />
-          <Navbar.Offcanvas
-            id={`offcanvasNavbar-expand-${"md"}`}
-            aria-labelledby={`offcanvasNavbarLabel-expand-${"md"}`}
-            placement="end"
-          >
+          <Navbar.Offcanvas>
             <Offcanvas.Body>
               <Nav className="justify-content-center flex-grow-1 pe-3">
                 <Nav.Link href="#about">About project</Nav.Link>
                 <Nav.Link href="#research">Research study details</Nav.Link>
+                <Nav.Link href="#concepts">Initial design concepts</Nav.Link>
+
                 <Nav.Link href="#usability">Usability study</Nav.Link>
                 <Nav.Link href="#final">Final design</Nav.Link>
                 <Nav.Link href="#conclusion">Conclusion</Nav.Link>
