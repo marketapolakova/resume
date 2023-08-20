@@ -76,124 +76,127 @@ const SaveAndBudgetApp = ({ en }) => {
           </FadeInSection>
         </div>
 
-        <FadeInSection ida="research">
-          <h4 className="section">Research study details </h4>
-          <h5>Pain points</h5>
-          <div className="row">
-            <div className="col shadow p-3 m-3 bg-white rounded">
-              <h6>Overwhelming Complexity</h6>
-
-              <p>
-                Many users feel overwhelmed by complex financial jargon and
-                intricate features that are hard to navigate or understand
-              </p>
-            </div>
-            <div className="col shadow p-3 m-3 bg-white rounded">
-              <h6>Lack of Personalization</h6>
-              <p>
-                Generic financial advice or tools that don't cater to individual
-                needs or goals can be frustrating
-              </p>
-            </div>
-            <div className="col shadow p-3 m-3 bg-white rounded">
-              <h6>Lack of Multi-device Support</h6>
-              <p>
-                Users might want to access their financial data across multiple
-                devices, and lack of such support can be a deterrent
-              </p>
-            </div>
-            <div className="col shadow p-3 m-3 bg-white rounded">
-              <h6>Lack of Educational Resources</h6>
-              <p>
-                {" "}
-                Users who are new to budgeting might feel lost without guidance,
-                tutorials, or educational content
-              </p>
-            </div>
-          </div>
-        </FadeInSection>
-
-        <div className="mb-3">
-          <FadeInSection>
-            <h5>Personas</h5>
-            <div className="d-md-flex align-items-center justify-content-center">
-              <span className="d-flex align-items-center justify-content-center">
-                <img
-                  style={{ width: "100%" }}
-                  className=" border border-secondary"
-                  src="/images/save-and-budget/persona1.png"
-                  alt="Persona 1"
-                />
-              </span>
-              <span className="d-flex align-items-center justify-content-center">
-                <img
-                  style={{ width: "100%" }}
-                  className="m-1 border border-secondary"
-                  src="/images/save-and-budget/persona2.png"
-                  alt="Persona 2"
-                />
-              </span>
-            </div>
-          </FadeInSection>
-          <div className="mb-3"></div>
-          <FadeInSection>
-            <h5>User journey map</h5>
-            <div className="d-md-flex align-items-center justify-content-center">
-              <span className="d-flex align-items-center justify-content-center">
-                <img
-                  style={{ width: "100%" }}
-                  className="m-1 border border-secondary"
-                  src="/images/save-and-budget/user-journey-sarah.png"
-                  alt="user journey"
-                />
-              </span>
-              <span className="d-flex align-items-center justify-content-center">
-                <img
-                  style={{ width: "100%" }}
-                  className="m-1 border border-secondary"
-                  src="/images/save-and-budget/user-journey-alex.png"
-                  alt="user journey"
-                />
-              </span>
-            </div>
-          </FadeInSection>
-        </div>
-        <div className="mb-3">
-          <FadeInSection>
-            <h5>User stories</h5>
+        <div id="research">
+          <FadeInSection ida="research">
+            <h4 id="research" className="section">
+              Research study details{" "}
+            </h4>
+            <h5>Pain points</h5>
             <div className="row">
               <div className="col shadow p-3 m-3 bg-white rounded">
-                <h6>Sarah</h6>
+                <h6>Overwhelming Complexity</h6>
+
                 <p>
-                  As a single mother managing household finances, I want to
-                  access a comprehensive budgeting tool on a larger screen, So
-                  that I can have a clear overview of my income, expenses, and
-                  savings.
+                  Many users feel overwhelmed by complex financial jargon and
+                  intricate features that are hard to navigate or understand
                 </p>
               </div>
               <div className="col shadow p-3 m-3 bg-white rounded">
-                <h6>Alex</h6>
+                <h6>Lack of Personalization</h6>
                 <p>
-                  As a busy professional always on-the-go, I want to have a
-                  dedicated mobile app for budgeting, So that I can quickly
-                  check and manage my finances anytime, anywhere.
+                  Generic financial advice or tools that don't cater to
+                  individual needs or goals can be frustrating
+                </p>
+              </div>
+              <div className="col shadow p-3 m-3 bg-white rounded">
+                <h6>Lack of Multi-device Support</h6>
+                <p>
+                  Users might want to access their financial data across
+                  multiple devices, and lack of such support can be a deterrent
+                </p>
+              </div>
+              <div className="col shadow p-3 m-3 bg-white rounded">
+                <h6>Lack of Educational Resources</h6>
+                <p>
+                  {" "}
+                  Users who are new to budgeting might feel lost without
+                  guidance, tutorials, or educational content
                 </p>
               </div>
             </div>
           </FadeInSection>
-        </div>
-        <FadeInSection>
-          <div className="mb-3">
-            <h5>Research summary</h5>
-            <p>
-              I conduct user research through personas, user empathy maps, and
-              problem statement and I conduct a competitive audit to assess the
-              strengths and weaknesses of competitors in the budgeting platform
-              market and identify opportunities for differentiation
-            </p>
-          </div>
-        </FadeInSection>
 
+          <div className="mb-3">
+            <FadeInSection>
+              <h5>Personas</h5>
+              <div className="d-md-flex align-items-center justify-content-center">
+                <span className="d-flex align-items-center justify-content-center">
+                  <img
+                    style={{ width: "100%" }}
+                    className=" border border-secondary"
+                    src="/images/save-and-budget/persona1.png"
+                    alt="Persona 1"
+                  />
+                </span>
+                <span className="d-flex align-items-center justify-content-center">
+                  <img
+                    style={{ width: "100%" }}
+                    className="m-1 border border-secondary"
+                    src="/images/save-and-budget/persona2.png"
+                    alt="Persona 2"
+                  />
+                </span>
+              </div>
+            </FadeInSection>
+            <div className="mb-3"></div>
+            <FadeInSection>
+              <h5>User journey map</h5>
+              <div className="d-md-flex align-items-center justify-content-center">
+                <span className="d-flex align-items-center justify-content-center">
+                  <img
+                    style={{ width: "100%" }}
+                    className="m-1 border border-secondary"
+                    src="/images/save-and-budget/user-journey-sarah.png"
+                    alt="user journey"
+                  />
+                </span>
+                <span className="d-flex align-items-center justify-content-center">
+                  <img
+                    style={{ width: "100%" }}
+                    className="m-1 border border-secondary"
+                    src="/images/save-and-budget/user-journey-alex.png"
+                    alt="user journey"
+                  />
+                </span>
+              </div>
+            </FadeInSection>
+          </div>
+          <div className="mb-3">
+            <FadeInSection>
+              <h5>User stories</h5>
+              <div className="row">
+                <div className="col shadow p-3 m-3 bg-white rounded">
+                  <h6>Sarah</h6>
+                  <p>
+                    As a single mother managing household finances, I want to
+                    access a comprehensive budgeting tool on a larger screen, So
+                    that I can have a clear overview of my income, expenses, and
+                    savings.
+                  </p>
+                </div>
+                <div className="col shadow p-3 m-3 bg-white rounded">
+                  <h6>Alex</h6>
+                  <p>
+                    As a busy professional always on-the-go, I want to have a
+                    dedicated mobile app for budgeting, So that I can quickly
+                    check and manage my finances anytime, anywhere.
+                  </p>
+                </div>
+              </div>
+            </FadeInSection>
+          </div>
+          <FadeInSection>
+            <div className="mb-3">
+              <h5>Research summary</h5>
+              <p>
+                I conduct user research through personas, user empathy maps, and
+                problem statement and I conduct a competitive audit to assess
+                the strengths and weaknesses of competitors in the budgeting
+                platform market and identify opportunities for differentiation
+              </p>
+            </div>
+          </FadeInSection>
+        </div>
         <div id="concepts">
           <FadeInSection>
             <h4 className="section">Initial design concepts</h4>
