@@ -5,7 +5,7 @@ import { NavDropdown } from "react-bootstrap";
 
 const Navbar = ({ bgCol, en, link }) => {
   return (
-    <div className="py-3 fixed-bottom row" style={{ backgroundColor: bgCol }}>
+    <div className="py-3 fixed-bottom row " style={{ backgroundColor: bgCol }}>
       <span className="col  d-flex align-items-center justify-content-center">
         <strong>
           <a className="navbar-line px-3" href={`${en ? "/en" : "/"}`}>

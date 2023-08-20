@@ -1,17 +1,28 @@
-import React from "react";
-import FadeInSection from "../../components/fadeInSection/FadeInSection";
+import React, { useState } from "react";
+import FadeInSection from "../../components/caseStudiesSections/FadeInSection";
+import Section from "../../components/caseStudiesSections/Section";
 import PortfolioImageComponent from "../../components/imageComponent/PortfolioImageComponent";
 import Navbar from "../../components/navbar/Navbar";
 import NavbarTop from "../../components/navbar/NavbarTop";
 
 const VirtualApp = ({ en }) => {
+  const [activeSection, setActiveSection] = useState("about");
+
+  const handleSectionChange = (sectionId) => {
+    setActiveSection(sectionId);
+  };
   return (
     <div>
-      <div className="container mx-5 my-5">
-        <NavbarTop />
+      <div className="container mx-5 my-5 py-4 ">
+        <NavbarTop activeSection={activeSection} />
         <h1 className="slide-in-left"> Virtual tour app for art gallery</h1>
         <div className="heading-line pb-4"></div>
-        <span className="d-flex align-items-center justify-content-center shadow  bg-white rounded mb-3 slide-in-right">
+        <Section
+          key={"about1"}
+          sectionId={"about"}
+          onSectionEnter={() => handleSectionChange("about")}
+        />
+        <span className="d-flex align-items-center justify-content-center shadow  bg-white roundedd my-3 slide-in-right">
           <img
             style={{ width: "50%" }}
             className="m-1 "
@@ -19,9 +30,13 @@ const VirtualApp = ({ en }) => {
             alt="scetch"
           />
         </span>
-
+        <Section
+          key={"about"}
+          sectionId={"about"}
+          onSectionEnter={() => handleSectionChange("about")}
+        />
         <FadeInSection>
-          <div id="about">
+          <div id="about" className="py-4">
             <h4>About project</h4>
             <p>
               <strong>My role: </strong> Ux designer designing a virtual tour
@@ -58,44 +73,48 @@ const VirtualApp = ({ en }) => {
             </p>
           </div>
         </FadeInSection>
-
-        <div id="research">
+        <Section
+          key={"research"}
+          sectionId={"research"}
+          onSectionEnter={() => handleSectionChange("research")}
+        />
+        <div id="research" className="py-4">
           <FadeInSection>
             <h4>Research study details</h4>
             <h5>Pain points</h5>
             <div className="row">
-              <div className="col shadow p-3 m-3 bg-white rounded">
+              <div className="col shadow p-3 m-3 bg-white roundedd">
                 <h6>Inability of personal visit</h6>
                 <p>
                   Many art lovers cannot visit art exhibition for different
                   reasons
                 </p>
               </div>
-              <div className="col shadow p-3 m-3 bg-white rounded">
+              <div className="col shadow p-3 m-3 bg-white roundedd">
                 <h6>Accessibility</h6>
                 <p>
                   Many pages with VR tour are not adapted for people with
                   disabilities
                 </p>
               </div>
-              <div className="col shadow p-3 m-3 bg-white rounded">
+              <div className="col shadow p-3 m-3 bg-white roundedd">
                 <h6>Translation</h6>
                 <p>Similar pages often do not have a translate function</p>
               </div>
-              <div className="col shadow p-3 m-3 bg-white rounded">
+              <div className="col shadow p-3 m-3 bg-white roundedd">
                 <h6>Information Architecture</h6>
                 <p>Navigations in similar pages are often overwhelming</p>
               </div>
             </div>
           </FadeInSection>
           <FadeInSection>
-            <div className="mb-3" id="persona">
+            <div className="my-3" id="persona">
               <h5>Personas</h5>
               <div className="d-md-flex align-items-center justify-content-center">
                 <span className="d-flex align-items-center justify-content-center">
                   <img
                     style={{ width: "100%" }}
-                    className=" border border-secondary"
+                    className=" border border-secondary rounded"
                     src="/images/virtual-tour/persona1.png"
                     alt="Persona 1"
                   />
@@ -103,19 +122,19 @@ const VirtualApp = ({ en }) => {
                 <span className="d-flex align-items-center justify-content-center">
                   <img
                     style={{ width: "100%" }}
-                    className="m-1 border border-secondary"
+                    className="m-1 border border-secondary rounded"
                     src="/images/virtual-tour/persona2.png"
                     alt="Persona 2"
                   />
                 </span>
               </div>
 
-              <div className="mb-3"></div>
+              <div className="my-3"></div>
               <h5>User journey map</h5>
               <span className="d-flex align-items-center justify-content-center">
                 <img
                   style={{ width: "100%" }}
-                  className="m-1 border border-secondary"
+                  className="m-1 border border-secondary rounded"
                   src="/images/virtual-tour/user-journey.png"
                   alt="user journey"
                 />
@@ -123,7 +142,7 @@ const VirtualApp = ({ en }) => {
             </div>
           </FadeInSection>
           <FadeInSection>
-            <div className="mb-3">
+            <div className="my-3">
               <h5>Competitive audit</h5>
               <p>
                 Competitive audit goal: The goal is to comprehend the
@@ -135,7 +154,7 @@ const VirtualApp = ({ en }) => {
               <span className="d-flex align-items-center justify-content-center">
                 <img
                   style={{ width: "100%" }}
-                  className="m-1 border border-secondary"
+                  className="m-1 border border-secondary rounded"
                   src="/images/virtual-tour/competitive-audit.png"
                   alt="competitive audit"
                 />
@@ -143,7 +162,7 @@ const VirtualApp = ({ en }) => {
               <span className="d-flex align-items-center justify-content-center">
                 <img
                   style={{ width: "100%" }}
-                  className="m-1 border border-secondary"
+                  className="m-1 border border-secondary rounded"
                   src="/images/virtual-tour/competitive-audit-2.png"
                   alt="competitive audit"
                 />
@@ -151,7 +170,7 @@ const VirtualApp = ({ en }) => {
             </div>
           </FadeInSection>
           <FadeInSection>
-            <div className="mb-3">
+            <div className="my-3">
               <h5>Research summary</h5>
               <p>
                 I conduct user research through personas, create user empathy
@@ -165,15 +184,20 @@ const VirtualApp = ({ en }) => {
           </FadeInSection>
         </div>
 
-        <div id="concepts">
+        <Section
+          key={"concepts"}
+          sectionId={"concepts"}
+          onSectionEnter={() => handleSectionChange("concepts")}
+        />
+        <div id="concepts" className="py-4">
           <FadeInSection>
             <h4>Initial design concepts</h4>
-            <div className="mb-3">
+            <div className="my-3">
               <h5>User flow</h5>
               <span className="d-flex align-items-center justify-content-center">
                 <img
                   style={{ width: "90%" }}
-                  className="m-1 border border-secondary"
+                  className="m-1 border border-secondary rounded"
                   src="/images/virtual-tour/userFlow.png"
                   alt="user flow"
                 />
@@ -182,12 +206,12 @@ const VirtualApp = ({ en }) => {
           </FadeInSection>
           <FadeInSection>
             <h5>Storyboards</h5>
-            <div className="mb-3">
+            <div className="my-3">
               <h6>Storyboard - big picture</h6>
-              <span className="d-flex align-items-center justify-content-center mb-3">
+              <span className="d-flex align-items-center justify-content-center my-3">
                 <img
                   style={{ width: "90%" }}
-                  className="m-1 border border-secondary"
+                  className="m-1 border border-secondary rounded"
                   src="/images/virtual-tour/storyboard-closeup.png"
                   alt="storyboard-bigPicture"
                 />
@@ -196,7 +220,7 @@ const VirtualApp = ({ en }) => {
               <span className="d-flex align-items-center justify-content-center">
                 <img
                   style={{ width: "90%" }}
-                  className="m-1 border border-secondary"
+                  className="m-1 border border-secondary rounded"
                   src="/images/virtual-tour/storyboard-closeup.png"
                   alt="storyboard-close-up"
                 />
@@ -204,11 +228,11 @@ const VirtualApp = ({ en }) => {
             </div>
           </FadeInSection>
           <FadeInSection>
-            <div className="mb-3">
+            <div className="my-3">
               <h5>Paper wireframes</h5>
               <span className="d-flex align-items-center justify-content-center">
                 <img
-                  className="border border-secondary"
+                  className="border border-secondary rounded"
                   style={{ width: "90%" }}
                   src="/images/virtual-tour/virtua-tour-scetch.png"
                   alt="scetch"
@@ -217,13 +241,13 @@ const VirtualApp = ({ en }) => {
             </div>
           </FadeInSection>
           <FadeInSection>
-            <div className="mb-3">
+            <div className="my-3">
               <h5>Digital wireframes</h5>
               <div className="row">
                 <div className="d-md-flex align-items-center justify-content-center">
                   <span className="d-flex align-items-center justify-content-center">
                     <img
-                      className="m-1 border border-secondary"
+                      className="m-1 border border-secondary rounded"
                       style={{ width: "250px" }}
                       src="/images/virtual-tour/wireframes/Home.png"
                       alt="scetch"
@@ -232,7 +256,7 @@ const VirtualApp = ({ en }) => {
                   <span className="d-flex align-items-center justify-content-center">
                     <img
                       style={{ width: "250px" }}
-                      className="m-1 border border-secondary"
+                      className="m-1 border border-secondary rounded"
                       src="/images/virtual-tour/wireframes/Exhbition-detail.png"
                       alt="scetch"
                     />
@@ -240,7 +264,7 @@ const VirtualApp = ({ en }) => {
                   <span className="d-flex align-items-center justify-content-center">
                     <img
                       style={{ width: "250px" }}
-                      className="m-1  border border-secondary"
+                      className="m-1  border border-secondary rounded"
                       src="/images/virtual-tour/wireframes/Tour.png"
                       alt="scetch"
                     />
@@ -248,7 +272,7 @@ const VirtualApp = ({ en }) => {
                   <span className="d-flex align-items-center justify-content-center">
                     <img
                       style={{ width: "250px" }}
-                      className="m-1  border border-secondary"
+                      className="m-1  border border-secondary rounded"
                       src="/images/virtual-tour/wireframes/Art-detail.png"
                       alt="scetch"
                     />
@@ -258,7 +282,7 @@ const VirtualApp = ({ en }) => {
                   <span className="d-flex align-items-center justify-content-center">
                     <img
                       style={{ width: "250px" }}
-                      className="m-1 border border-secondary"
+                      className="m-1 border border-secondary rounded"
                       src="/images/virtual-tour/wireframes/Competitions.png"
                       alt="scetch"
                     />
@@ -266,7 +290,7 @@ const VirtualApp = ({ en }) => {
                   <span className="d-flex align-items-center justify-content-center">
                     <img
                       style={{ width: "250px" }}
-                      className="m-1 border border-secondary"
+                      className="m-1 border border-secondary rounded"
                       src="/images/virtual-tour/wireframes/Competition-detail.png"
                       alt="scetch"
                     />
@@ -274,7 +298,7 @@ const VirtualApp = ({ en }) => {
                   <span className="d-flex align-items-center justify-content-center">
                     <img
                       style={{ width: "250px" }}
-                      className="m-1 border border-secondary"
+                      className="m-1 border border-secondary rounded"
                       src="/images/virtual-tour/wireframes/favorite.png"
                       alt="scetch"
                     />
@@ -282,7 +306,7 @@ const VirtualApp = ({ en }) => {
                   <span className="d-flex align-items-center justify-content-center">
                     <img
                       style={{ width: "250px" }}
-                      className="m-1 border border-secondary"
+                      className="m-1 border border-secondary rounded"
                       src="/images/virtual-tour/wireframes/profile-settings.png"
                       alt="scetch"
                     />
@@ -293,22 +317,27 @@ const VirtualApp = ({ en }) => {
           </FadeInSection>
         </div>
 
-        <div id="usability">
+        <Section
+          key={"usability"}
+          sectionId={"usability"}
+          onSectionEnter={() => handleSectionChange("usability")}
+        />
+        <div id="usability" className="py-4">
           <FadeInSection>
             <h4>Usability study</h4>
-            <div className="mb-3 row">
+            <div className="my-3 row">
               <p>
                 I conducted usability study. Tests were conducted on wireframes.
               </p>
               <h5>Usability study findings</h5>
-              <div className="col shadow p-3 m-3 bg-white rounded col">
+              <div className="col shadow p-3 m-3 bg-white roundedd col">
                 <h6>Access to main navigation in VR tour mode</h6>
                 <p>
                   Users wants main navigation in the VR tour mode for quicker
                   navigation to another page
                 </p>
               </div>
-              <div className="col shadow p-3 m-3 bg-white rounded col">
+              <div className="col shadow p-3 m-3 bg-white roundedd col">
                 <h6>Usage of bottom navigation</h6>
                 <p>
                   Users find it confusing what the bottom navigation should be
@@ -318,7 +347,7 @@ const VirtualApp = ({ en }) => {
             </div>
           </FadeInSection>
           <FadeInSection>
-            <div className="mb-3">
+            <div className="my-3">
               <h5>Sorted first usability study findings</h5>
               <span className="d-flex align-items-center justify-content-center">
                 <img
@@ -331,15 +360,20 @@ const VirtualApp = ({ en }) => {
           </FadeInSection>
         </div>
 
-        <div id="final">
+        <Section
+          key={"final"}
+          sectionId={"final"}
+          onSectionEnter={() => handleSectionChange("final")}
+        />
+        <div id="final" className="py-4">
           <FadeInSection>
             <h4>Final design</h4>
-            <div className="row mb-3">
+            <div className="row my-3">
               <h5>Mockups</h5>
               <div className="d-md-flex align-items-center justify-content-center">
                 <span className="d-flex align-items-center justify-content-center">
                   <img
-                    className="m-1 border border-secondary"
+                    className="m-1 border border-secondary rounded"
                     style={{ width: "250px" }}
                     src="/images/virtual-tour/mocks/Home.png"
                     alt="scetch"
@@ -348,7 +382,7 @@ const VirtualApp = ({ en }) => {
                 <span className="d-flex align-items-center justify-content-center">
                   <img
                     style={{ width: "250px" }}
-                    className="m-1 border border-secondary"
+                    className="m-1 border border-secondary rounded"
                     src="/images/virtual-tour/mocks/Exhbition-detail.png"
                     alt="scetch"
                   />
@@ -356,7 +390,7 @@ const VirtualApp = ({ en }) => {
                 <span className="d-flex align-items-center justify-content-center">
                   <img
                     style={{ width: "250px" }}
-                    className="m-1  border border-secondary"
+                    className="m-1  border border-secondary rounded"
                     src="/images/virtual-tour/mocks/Tour.png"
                     alt="scetch"
                   />
@@ -364,7 +398,7 @@ const VirtualApp = ({ en }) => {
                 <span className="d-flex align-items-center justify-content-center">
                   <img
                     style={{ width: "250px" }}
-                    className="m-1  border border-secondary"
+                    className="m-1  border border-secondary rounded"
                     src="/images/virtual-tour/mocks/Art-detail.png"
                     alt="scetch"
                   />
@@ -374,7 +408,7 @@ const VirtualApp = ({ en }) => {
                 <span className="d-flex align-items-center justify-content-center">
                   <img
                     style={{ width: "250px" }}
-                    className="m-1 border border-secondary"
+                    className="m-1 border border-secondary rounded"
                     src="/images/virtual-tour/mocks/Competitions.png"
                     alt="scetch"
                   />
@@ -382,7 +416,7 @@ const VirtualApp = ({ en }) => {
                 <span className="d-flex align-items-center justify-content-center">
                   <img
                     style={{ width: "250px" }}
-                    className="m-1 border border-secondary"
+                    className="m-1 border border-secondary rounded"
                     src="/images/virtual-tour/mocks/Competition-detail.png"
                     alt="scetch"
                   />
@@ -390,7 +424,7 @@ const VirtualApp = ({ en }) => {
                 <span className="d-flex align-items-center justify-content-center">
                   <img
                     style={{ width: "250px" }}
-                    className="m-1 border border-secondary"
+                    className="m-1 border border-secondary rounded"
                     src="/images/virtual-tour/mocks/favorite.png"
                     alt="scetch"
                   />
@@ -398,7 +432,7 @@ const VirtualApp = ({ en }) => {
                 <span className="d-flex align-items-center justify-content-center">
                   <img
                     style={{ width: "250px" }}
-                    className="m-1 border border-secondary"
+                    className="m-1 border border-secondary rounded"
                     src="/images/virtual-tour/mocks/profile-settings.png"
                     alt="scetch"
                   />
@@ -407,7 +441,7 @@ const VirtualApp = ({ en }) => {
             </div>
           </FadeInSection>
           <FadeInSection>
-            <div className="mb-3">
+            <div className="my-3">
               <h5>High-fidelity prototype</h5>
               <div className="d-flex align-items-center justify-content-center">
                 <div style={{ width: "90%" }}>
@@ -428,6 +462,12 @@ const VirtualApp = ({ en }) => {
             </div>
           </FadeInSection>
         </div>
+
+        <Section
+          key={"conclusion"}
+          sectionId={"conclusion"}
+          onSectionEnter={() => handleSectionChange("conclusion")}
+        />
         <FadeInSection>
           <div id="conclusion">
             <h4>Conclusion</h4>
@@ -443,7 +483,7 @@ const VirtualApp = ({ en }) => {
           </div>
         </FadeInSection>
       </div>
-      <div className="p-2"></div>
+
       <Navbar
         link={"/case-study/virtual-app"}
         en={en && true}

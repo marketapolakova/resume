@@ -1,19 +1,30 @@
-import React from "react";
-import FadeInSection from "../../components/fadeInSection/FadeInSection";
+import React, { useState } from "react";
+import FadeInSection from "../../components/caseStudiesSections/FadeInSection";
+import Section from "../../components/caseStudiesSections/Section";
 import PortfolioImageComponent from "../../components/imageComponent/PortfolioImageComponent";
 import Navbar from "../../components/navbar/Navbar";
 import NavbarTop from "../../components/navbar/NavbarTop";
 
 const DanceClasses = ({ en }) => {
+  const [activeSection, setActiveSection] = useState("about");
+
+  const handleSectionChange = (sectionId) => {
+    setActiveSection(sectionId);
+  };
   return (
     <div>
-      <NavbarTop />
-      <div className="container mx-5 my-5">
+      <NavbarTop activeSection={activeSection} />
+      <div className="container mx-5 my-5 py-4 ">
         <h1 className="slide-in-left">
           Website for finding and viewing dance classes
         </h1>
         <div className="heading-line pb-4"></div>
-        <span className="d-flex align-items-center justify-content-center shadow  bg-white rounded mb-3 slide-in-right">
+        <Section
+          key={"about1"}
+          sectionId={"about"}
+          onSectionEnter={() => handleSectionChange("about")}
+        />
+        <span className="d-flex align-items-center justify-content-center shadow  bg-white rounded my-3 slide-in-right">
           <img
             style={{ width: "50%" }}
             className="m-1 "
@@ -22,8 +33,13 @@ const DanceClasses = ({ en }) => {
           />
         </span>
 
+        <Section
+          key={"about"}
+          sectionId={"about"}
+          onSectionEnter={() => handleSectionChange("about")}
+        />
         <FadeInSection>
-          <div id="about">
+          <div id="about" className="py-4">
             <h4>About project</h4>
             <p>
               <strong>My role: </strong> Ux designer designing a responsive
@@ -50,7 +66,12 @@ const DanceClasses = ({ en }) => {
           </div>
         </FadeInSection>
 
-        <div id="research">
+        <Section
+          key={"research"}
+          sectionId={"research"}
+          onSectionEnter={() => handleSectionChange("research")}
+        />
+        <div id="research" className="py-4">
           <FadeInSection>
             <h4>Research study details</h4>
             <h5>Pain points</h5>
@@ -81,13 +102,13 @@ const DanceClasses = ({ en }) => {
           </FadeInSection>
 
           <FadeInSection>
-            <div className="mb-3">
+            <div className="my-3">
               <h5>Personas</h5>
               <div className="d-md-flex align-items-center justify-content-center">
                 <span className="d-flex align-items-center justify-content-center">
                   <img
                     style={{ width: "100%" }}
-                    className=" border border-secondary"
+                    className=" border border-secondary rounded"
                     src="/images/dance-classes/persona1.png"
                     alt="Persona 1"
                   />
@@ -95,19 +116,19 @@ const DanceClasses = ({ en }) => {
                 <span className="d-flex align-items-center justify-content-center">
                   <img
                     style={{ width: "100%" }}
-                    className="m-1 border border-secondary"
+                    className="m-1 border border-secondary rounded"
                     src="/images/dance-classes/persona2.png"
                     alt="Persona 2"
                   />
                 </span>
               </div>
 
-              <div className="mb-3"></div>
+              <div className="my-3"></div>
               <h5>User journey map</h5>
               <span className="d-flex align-items-center justify-content-center">
                 <img
                   style={{ width: "90%" }}
-                  className="m-1 border border-secondary"
+                  className="m-1 border border-secondary rounded"
                   src="/images/dance-classes/user-journey.png"
                   alt="competitive audit"
                 />
@@ -116,7 +137,7 @@ const DanceClasses = ({ en }) => {
           </FadeInSection>
 
           <FadeInSection>
-            <div className="mb-3">
+            <div className="my-3">
               <h5>User stories</h5>
               <div className="row">
                 <div className="col shadow p-3 m-3 bg-white rounded">
@@ -141,7 +162,7 @@ const DanceClasses = ({ en }) => {
           </FadeInSection>
 
           <FadeInSection>
-            <div className="mb-3">
+            <div className="my-3">
               <h5>Research summary</h5>
               <p>
                 I conduct user research through personas, create user empathy
@@ -155,15 +176,20 @@ const DanceClasses = ({ en }) => {
           </FadeInSection>
         </div>
 
-        <div id="concepts">
+        <Section
+          key={"concepts"}
+          sectionId={"concepts"}
+          onSectionEnter={() => handleSectionChange("concepts")}
+        />
+        <div id="concepts" className="py-4">
           <FadeInSection>
             <h4>Initial design concepts</h4>
-            <div className="mb-3">
+            <div className="my-3">
               <h5>Sitemap</h5>
               <span className="d-flex align-items-center justify-content-center">
                 <img
                   style={{ width: "90%" }}
-                  className="m-1 border border-secondary"
+                  className="m-1 border border-secondary rounded"
                   src="/images/dance-classes/sitemap.png"
                   alt="user flow"
                 />
@@ -171,14 +197,14 @@ const DanceClasses = ({ en }) => {
             </div>
           </FadeInSection>
 
-          <div className="mb-3">
+          <div className="my-3">
             <FadeInSection>
-              <div className="mb-3">
+              <div className="my-3">
                 <h5>Paper wireframes</h5>
 
                 <span className="d-flex align-items-center justify-content-center">
                   <img
-                    className="border border-secondary"
+                    className="border border-secondary rounded"
                     style={{ width: "90%" }}
                     src="/images/dance-classes/scetch.png"
                     alt="scetch"
@@ -190,7 +216,7 @@ const DanceClasses = ({ en }) => {
               <h6>Paper wireframes for responsiveness</h6>
               <span className="d-flex align-items-center justify-content-center">
                 <img
-                  className="border border-secondary"
+                  className="border border-secondary rounded"
                   style={{ width: "50%" }}
                   src="/images/dance-classes/scetch-responsive.png"
                   alt="scetch"
@@ -200,13 +226,13 @@ const DanceClasses = ({ en }) => {
           </div>
 
           <FadeInSection>
-            <div className="mb-3">
+            <div className="my-3">
               <h5>Digital wireframes - desktop</h5>
               <div className="row">
                 <div className="d-md-flex align-items-center justify-content-center">
                   <span className="d-flex align-items-center justify-content-center">
                     <img
-                      className="m-1 border border-secondary"
+                      className="m-1 border border-secondary rounded"
                       style={{ width: "250px" }}
                       src="/images/dance-classes/wireframes/homepage.png"
                       alt="wireframe homepage"
@@ -215,7 +241,7 @@ const DanceClasses = ({ en }) => {
                   <span className="d-flex align-items-center justify-content-center">
                     <img
                       style={{ width: "250px" }}
-                      className="m-1  border border-secondary"
+                      className="m-1  border border-secondary rounded"
                       src="/images/dance-classes/wireframes/classes-group.png"
                       alt="wireframe classes group"
                     />
@@ -223,7 +249,7 @@ const DanceClasses = ({ en }) => {
                   <span className="d-flex align-items-center justify-content-center">
                     <img
                       style={{ width: "250px" }}
-                      className="m-1  border border-secondary"
+                      className="m-1  border border-secondary rounded"
                       src="/images/dance-classes/wireframes/list-classes.png"
                       alt="wireframe list classes"
                     />
@@ -231,7 +257,7 @@ const DanceClasses = ({ en }) => {
                   <span className="d-flex align-items-center justify-content-center">
                     <img
                       style={{ width: "250px" }}
-                      className="m-1  border border-secondary"
+                      className="m-1  border border-secondary rounded"
                       src="/images/dance-classes/wireframes/class-enroll-detail.png"
                       alt="wireframe class enroll detail"
                     />
@@ -239,7 +265,7 @@ const DanceClasses = ({ en }) => {
                   <span className="d-flex align-items-center justify-content-center">
                     <img
                       style={{ width: "250px" }}
-                      className="m-1 border border-secondary"
+                      className="m-1 border border-secondary rounded"
                       src="/images/dance-classes/wireframes/class-detail.png"
                       alt="wireframe class detail"
                     />
@@ -250,13 +276,13 @@ const DanceClasses = ({ en }) => {
           </FadeInSection>
 
           <FadeInSection>
-            <div className="mb-3">
+            <div className="my-3">
               <h5>Digital wireframes - mobile</h5>
               <div className="row">
                 <div className="d-md-flex align-items-center justify-content-center">
                   <span className="d-flex align-items-center justify-content-center">
                     <img
-                      className="m-1 border border-secondary"
+                      className="m-1 border border-secondary rounded"
                       style={{ width: "150px" }}
                       src="/images/dance-classes/wireframes/mobile/homepage.png"
                       alt="wireframe homepage"
@@ -265,7 +291,7 @@ const DanceClasses = ({ en }) => {
                   <span className="d-flex align-items-center justify-content-center">
                     <img
                       style={{ width: "250px" }}
-                      className="m-1  border border-secondary"
+                      className="m-1  border border-secondary rounded"
                       src="/images/dance-classes/wireframes/mobile/class-group.png"
                       alt="wireframe classes group"
                     />
@@ -273,7 +299,7 @@ const DanceClasses = ({ en }) => {
                   <span className="d-flex align-items-center justify-content-center">
                     <img
                       style={{ width: "250px" }}
-                      className="m-1  border border-secondary"
+                      className="m-1  border border-secondary rounded"
                       src="/images/dance-classes/wireframes/mobile/All-classes.png"
                       alt="wireframe list classes"
                     />
@@ -281,7 +307,7 @@ const DanceClasses = ({ en }) => {
                   <span className="d-flex align-items-center justify-content-center">
                     <img
                       style={{ width: "150px" }}
-                      className="m-1  border border-secondary"
+                      className="m-1  border border-secondary rounded"
                       src="/images/dance-classes/wireframes/mobile/class-enrol-detail.png"
                       alt="wireframe class enroll detail"
                     />
@@ -289,7 +315,7 @@ const DanceClasses = ({ en }) => {
                   <span className="d-flex align-items-center justify-content-center">
                     <img
                       style={{ width: "250px" }}
-                      className="m-1 border border-secondary"
+                      className="m-1 border border-secondary rounded"
                       src="/images/dance-classes/wireframes/mobile/class-detail.png"
                       alt="wireframe class detail"
                     />
@@ -300,10 +326,15 @@ const DanceClasses = ({ en }) => {
           </FadeInSection>
         </div>
 
-        <div id="usability">
+        <Section
+          key={"usability"}
+          sectionId={"usability"}
+          onSectionEnter={() => handleSectionChange("usability")}
+        />
+        <div id="usability" className="py-4">
           <FadeInSection>
             <h4>Usability study</h4>
-            <div className="mb-3 row">
+            <div className="my-3 row">
               <p>
                 I conducted usability study. Tests were conducted on wireframes.
               </p>
@@ -350,15 +381,20 @@ const DanceClasses = ({ en }) => {
           </FadeInSection>
         </div>
 
-        <div id="final">
+        <Section
+          key={"final"}
+          sectionId={"final"}
+          onSectionEnter={() => handleSectionChange("final")}
+        />
+        <div id="final" className="py-4">
           <FadeInSection>
             <h4>Final design</h4>
-            <div className="row mb-3">
+            <div className="row my-3">
               <h5>Mockups - desktop version</h5>
               <div className="d-md-flex align-items-center justify-content-center">
                 <span className="d-flex align-items-center justify-content-center">
                   <img
-                    className="m-1 border border-secondary"
+                    className="m-1 border border-secondary rounded"
                     style={{ width: "350px" }}
                     src="/images/dance-classes/mocks/homepage.png"
                     alt="mockup homepage"
@@ -367,7 +403,7 @@ const DanceClasses = ({ en }) => {
                 <span className="d-flex align-items-center justify-content-center">
                   <img
                     style={{ width: "450px" }}
-                    className="m-1 border border-secondary"
+                    className="m-1 border border-secondary rounded"
                     src="/images/dance-classes/mocks/classes-group.png"
                     alt="mockup class group"
                   />
@@ -375,7 +411,7 @@ const DanceClasses = ({ en }) => {
                 <span className="d-flex align-items-center justify-content-center">
                   <img
                     style={{ width: "450px" }}
-                    className="m-1  border border-secondary"
+                    className="m-1  border border-secondary rounded"
                     src="/images/dance-classes/mocks/list-classes.png"
                     alt="mockup list classes"
                   />
@@ -385,7 +421,7 @@ const DanceClasses = ({ en }) => {
                 <span className="d-flex align-items-center justify-content-center">
                   <img
                     style={{ width: "350px" }}
-                    className="m-1  border border-secondary"
+                    className="m-1  border border-secondary rounded"
                     src="/images/dance-classes/mocks/class-enroll-detail.png"
                     alt="mockup class enroll detail"
                   />
@@ -393,7 +429,7 @@ const DanceClasses = ({ en }) => {
                 <span className="d-flex align-items-center justify-content-center">
                   <img
                     style={{ width: "450px" }}
-                    className="m-1  border border-secondary"
+                    className="m-1  border border-secondary rounded"
                     src="/images/dance-classes/mocks/class-detail.png"
                     alt="mockup class detail"
                   />
@@ -403,7 +439,7 @@ const DanceClasses = ({ en }) => {
           </FadeInSection>
 
           <FadeInSection>
-            <div className="mb-3">
+            <div className="my-3">
               <h5>High-fidelity prototype - desktop version</h5>
               <div className="d-flex align-items-center justify-content-center">
                 <div style={{ width: "90%" }}>
@@ -425,12 +461,12 @@ const DanceClasses = ({ en }) => {
           </FadeInSection>
 
           <FadeInSection>
-            <div className="row mb-3">
+            <div className="row my-3">
               <h5>Mockups - mobile version</h5>
               <div className="d-md-flex align-items-center justify-content-center">
                 <span className="d-flex align-items-center justify-content-center">
                   <img
-                    className="m-1 border border-secondary"
+                    className="m-1 border border-secondary rounded"
                     style={{ width: "150px" }}
                     src="/images/dance-classes/mocks/mobile/homepage.png"
                     alt="mockup homepage"
@@ -439,7 +475,7 @@ const DanceClasses = ({ en }) => {
                 <span className="d-flex align-items-center justify-content-center">
                   <img
                     style={{ width: "150px" }}
-                    className="m-1 border border-secondary"
+                    className="m-1 border border-secondary rounded"
                     src="/images/dance-classes/mocks/mobile/class-group.png"
                     alt="mockup class group"
                   />
@@ -447,7 +483,7 @@ const DanceClasses = ({ en }) => {
                 <span className="d-flex align-items-center justify-content-center">
                   <img
                     style={{ width: "150px" }}
-                    className="m-1  border border-secondary"
+                    className="m-1  border border-secondary rounded"
                     src="/images/dance-classes/mocks/mobile/All-classes.png"
                     alt="mockup list classes"
                   />
@@ -455,7 +491,7 @@ const DanceClasses = ({ en }) => {
                 <span className="d-flex align-items-center justify-content-center">
                   <img
                     style={{ width: "150px" }}
-                    className="m-1  border border-secondary"
+                    className="m-1  border border-secondary rounded"
                     src="/images/dance-classes/mocks/mobile/class-enrol-detail.png"
                     alt="mockup class enroll detail"
                   />
@@ -463,7 +499,7 @@ const DanceClasses = ({ en }) => {
                 <span className="d-flex align-items-center justify-content-center">
                   <img
                     style={{ width: "150px" }}
-                    className="m-1  border border-secondary"
+                    className="m-1  border border-secondary rounded"
                     src="/images/dance-classes/mocks/mobile/class-detail.png"
                     alt="mockup class detail"
                   />
@@ -473,7 +509,7 @@ const DanceClasses = ({ en }) => {
           </FadeInSection>
 
           <FadeInSection>
-            <div className="mb-3">
+            <div className="my-3">
               <h5>High-fidelity prototype - mobile version</h5>
               <div className="d-flex align-items-center justify-content-center">
                 <div style={{ width: "90%" }}>
@@ -495,6 +531,11 @@ const DanceClasses = ({ en }) => {
           </FadeInSection>
         </div>
 
+        <Section
+          key={"conclusion"}
+          sectionId={"conclusion"}
+          onSectionEnter={() => handleSectionChange("conclusion")}
+        />
         <div id="conclusion">
           <FadeInSection>
             <h4>Conclusion</h4>
@@ -510,7 +551,7 @@ const DanceClasses = ({ en }) => {
           </FadeInSection>
         </div>
       </div>
-      <div className="p-2"></div>
+
       <Navbar
         link={"/case-study/dance-classes"}
         en={en && true}

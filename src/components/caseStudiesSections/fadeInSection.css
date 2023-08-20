@@ -1,0 +1,10 @@
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(20px); /* Můžete upravit podle svých preferencí */
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}

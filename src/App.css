@@ -78,3 +78,6 @@ a:hover {
     font-size: 40px;
   }
 }
+html {
+  scroll-behavior: smooth;
+}

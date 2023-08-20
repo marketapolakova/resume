@@ -9,7 +9,7 @@ const PortfolioImageComponent = ({ src, alt, en, btnName, delay }) => {
       </div>
 
       <div className="middle">
-        <div className="text">
+        <div className="text" style={{ borderRadius: "5px" }}>
           {btnName ? btnName : en ? "Watch" : "Prohlédnout"}
         </div>
       </div>

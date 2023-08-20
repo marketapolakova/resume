@@ -1,45 +1,52 @@
-import React, { useEffect, useState } from "react";
-import FadeInSection from "../../components/fadeInSection/FadeInSection";
+import React, { useState } from "react";
+
+import FadeInSection from "../../components/caseStudiesSections/FadeInSection";
+import Section from "../../components/caseStudiesSections/Section";
 import PortfolioImageComponent from "../../components/imageComponent/PortfolioImageComponent";
 import Navbar from "../../components/navbar/Navbar";
 import NavbarTop from "../../components/navbar/NavbarTop";
 
 const SaveAndBudgetApp = ({ en }) => {
-  const callbackFn = (entries) => {
-    entries.forEach((e) => {
-      e.isIntersecting && console.log(e);
-    });
+  const [activeSection, setActiveSection] = useState("about");
+
+  const handleSectionChange = (sectionId) => {
+    setActiveSection(sectionId);
   };
-  useEffect(() => {
-    let observer = new IntersectionObserver(callbackFn, {
-      threshold: 0.5,
-      root: null,
-      rootMargin: "0px",
-    });
-    let entries = document.querySelectorAll("h4.section");
-    entries.forEach((entry) => observer.observe(entry));
-  }, []);
 
   return (
     <div>
-      <NavbarTop />
-      <div className="container mx-5 my-5">
+      <NavbarTop activeSection={activeSection} />
+      <div className="container py-4 mx-5 my-5 py-4 ">
         <h1 className="slide-in-left">
           Cross-platform app to help adults in budgeting & saving money
         </h1>
+
         <div className="heading-line pb-4"></div>
-        <span className="d-flex align-items-center justify-content-center shadow  bg-white rounded mb-3">
+        <Section
+          key={"about1"}
+          sectionId={"about"}
+          onSectionEnter={() => handleSectionChange("about")}
+        />
+        <span className="d-flex align-items-center justify-content-center shadow  bg-white rounded my-3">
           <img
-            style={{ width: "50%" }}
+            style={{ width: "80%" }}
             className="m-1 slide-in-right"
             src="/images/save-and-budget/main-pic.png"
             alt="scetch"
           />
         </span>
-
-        <div id="about">
-          <FadeInSection ida="about">
-            <h4 className="section">About project</h4>
+        <Section
+          key={"about"}
+          sectionId={"about"}
+          onSectionEnter={() => handleSectionChange("about")}
+        />
+        <div id="about" className="py-4">
+          <FadeInSection
+            key={"about"}
+            sectionId={"about"}
+            onSectionEnter={() => handleSectionChange("about")}
+          >
+            <h3 className="section">About project</h3>
             <p>
               <strong>My role: </strong> Ux designer designing a virtual tour
               app from start to end
@@ -76,15 +83,18 @@ const SaveAndBudgetApp = ({ en }) => {
           </FadeInSection>
         </div>
 
-        <div id="research">
+        <Section
+          key={"research"}
+          sectionId={"research"}
+          onSectionEnter={() => handleSectionChange("research")}
+        />
+        <div id="research" className="py-4">
           <FadeInSection ida="research">
-            <h4 id="research" className="section">
-              Research study details{" "}
-            </h4>
-            <h5>Pain points</h5>
+            <h3 className="section">Research study details </h3>
+            <h4>Pain points</h4>
             <div className="row">
               <div className="col shadow p-3 m-3 bg-white rounded">
-                <h6>Overwhelming Complexity</h6>
+                <h5>Overwhelming Complexity</h5>
 
                 <p>
                   Many users feel overwhelmed by complex financial jargon and
@@ -92,21 +102,21 @@ const SaveAndBudgetApp = ({ en }) => {
                 </p>
               </div>
               <div className="col shadow p-3 m-3 bg-white rounded">
-                <h6>Lack of Personalization</h6>
+                <h5>Lack of Personalization</h5>
                 <p>
                   Generic financial advice or tools that don't cater to
                   individual needs or goals can be frustrating
                 </p>
               </div>
               <div className="col shadow p-3 m-3 bg-white rounded">
-                <h6>Lack of Multi-device Support</h6>
+                <h5>Lack of Multi-device Support</h5>
                 <p>
                   Users might want to access their financial data across
                   multiple devices, and lack of such support can be a deterrent
                 </p>
               </div>
               <div className="col shadow p-3 m-3 bg-white rounded">
-                <h6>Lack of Educational Resources</h6>
+                <h5>Lack of Educational Resources</h5>
                 <p>
                   {" "}
                   Users who are new to budgeting might feel lost without
@@ -116,14 +126,14 @@ const SaveAndBudgetApp = ({ en }) => {
             </div>
           </FadeInSection>
 
-          <div className="mb-3">
+          <div className="my-3">
             <FadeInSection>
-              <h5>Personas</h5>
+              <h4>Personas</h4>
               <div className="d-md-flex align-items-center justify-content-center">
-                <span className="d-flex align-items-center justify-content-center">
+                <span className="d-flex align-items-center justify-content-center ">
                   <img
                     style={{ width: "100%" }}
-                    className=" border border-secondary"
+                    className=" border border-secondary rounded  "
                     src="/images/save-and-budget/persona1.png"
                     alt="Persona 1"
                   />
@@ -131,21 +141,23 @@ const SaveAndBudgetApp = ({ en }) => {
                 <span className="d-flex align-items-center justify-content-center">
                   <img
                     style={{ width: "100%" }}
-                    className="m-1 border border-secondary"
+                    className="m-1 border border-secondary rounded"
+                    rounded
                     src="/images/save-and-budget/persona2.png"
                     alt="Persona 2"
                   />
                 </span>
               </div>
             </FadeInSection>
-            <div className="mb-3"></div>
+            <div className="my-3"></div>
             <FadeInSection>
-              <h5>User journey map</h5>
+              <h4>User journey map</h4>
               <div className="d-md-flex align-items-center justify-content-center">
                 <span className="d-flex align-items-center justify-content-center">
                   <img
                     style={{ width: "100%" }}
-                    className="m-1 border border-secondary"
+                    className="m-1 border border-secondary rounded"
+                    rounded
                     src="/images/save-and-budget/user-journey-sarah.png"
                     alt="user journey"
                   />
@@ -153,7 +165,8 @@ const SaveAndBudgetApp = ({ en }) => {
                 <span className="d-flex align-items-center justify-content-center">
                   <img
                     style={{ width: "100%" }}
-                    className="m-1 border border-secondary"
+                    className="m-1 border border-secondary rounded"
+                    rounded
                     src="/images/save-and-budget/user-journey-alex.png"
                     alt="user journey"
                   />
@@ -161,12 +174,12 @@ const SaveAndBudgetApp = ({ en }) => {
               </div>
             </FadeInSection>
           </div>
-          <div className="mb-3">
+          <div className="my-3">
             <FadeInSection>
-              <h5>User stories</h5>
+              <h4>User stories</h4>
               <div className="row">
                 <div className="col shadow p-3 m-3 bg-white rounded">
-                  <h6>Sarah</h6>
+                  <h5>Sarah</h5>
                   <p>
                     As a single mother managing household finances, I want to
                     access a comprehensive budgeting tool on a larger screen, So
@@ -175,7 +188,7 @@ const SaveAndBudgetApp = ({ en }) => {
                   </p>
                 </div>
                 <div className="col shadow p-3 m-3 bg-white rounded">
-                  <h6>Alex</h6>
+                  <h5>Alex</h5>
                   <p>
                     As a busy professional always on-the-go, I want to have a
                     dedicated mobile app for budgeting, So that I can quickly
@@ -186,8 +199,8 @@ const SaveAndBudgetApp = ({ en }) => {
             </FadeInSection>
           </div>
           <FadeInSection>
-            <div className="mb-3">
-              <h5>Research summary</h5>
+            <div className="my-3">
+              <h4>Research summary</h4>
               <p>
                 I conduct user research through personas, user empathy maps, and
                 problem statement and I conduct a competitive audit to assess
@@ -197,40 +210,49 @@ const SaveAndBudgetApp = ({ en }) => {
             </div>
           </FadeInSection>
         </div>
-        <div id="concepts">
+
+        <Section
+          key={"concepts"}
+          sectionId={"concepts"}
+          onSectionEnter={() => handleSectionChange("concepts")}
+        />
+        <div id="concepts" className="py-4">
           <FadeInSection>
-            <h4 className="section">Initial design concepts</h4>
-            <div className="mb-3">
-              <h5>Sitemap</h5>
+            <h3 className="section">Initial design concepts</h3>
+            <div className="my-3">
+              <h4>Sitemap</h4>
               <span className="d-flex align-items-center justify-content-center">
                 <img
                   style={{ width: "90%" }}
-                  className="m-1 border border-secondary"
+                  className="m-1 border border-secondary rounded"
+                  rounded
                   src="/images/save-and-budget/sitemap.png"
                   alt="user flow"
                 />
               </span>
             </div>
           </FadeInSection>
-          {/* <div className="mb-3">
-          <h5>Paper wireframes</h5>
-          <span className="d-flex align-items-center justify-content-center">
-            <img
-              className="border border-secondary"
-              style={{ width: "90%" }}
-              src="/images/virtual-tour/virtua-tour-scetch.png"
-              alt="scetch"
-            />
-          </span>
-        </div> */}
+          <div className="my-3">
+            <h4>Paper wireframes</h4>
+            <span className="d-flex align-items-center justify-content-center">
+              <img
+                className="border border-secondary rounded"
+                rounded
+                style={{ width: "90%" }}
+                src="/images/save-and-budget/scetch.png"
+                alt="scetch"
+              />
+            </span>
+          </div>
           <FadeInSection>
-            <div className="mb-3">
-              <h5>Digital wireframes - mobile app</h5>
+            <div className="my-3">
+              <h4>Digital wireframes - mobile app</h4>
               <div className="row">
                 <div className="d-md-flex align-items-center justify-content-center">
                   <span className="d-flex align-items-center justify-content-center">
                     <img
-                      className="m-1 border border-secondary"
+                      className="m-1 border border-secondary rounded"
+                      rounded
                       style={{ width: "250px" }}
                       src="/images/save-and-budget/wireframes/Dashboard.png"
                       alt="scetch"
@@ -239,7 +261,8 @@ const SaveAndBudgetApp = ({ en }) => {
                   <span className="d-flex align-items-center justify-content-center">
                     <img
                       style={{ width: "250px" }}
-                      className="m-1 border border-secondary"
+                      className="m-1 border border-secondary rounded"
+                      rounded
                       src="/images/save-and-budget/wireframes/Income.png"
                       alt="scetch"
                     />
@@ -247,7 +270,8 @@ const SaveAndBudgetApp = ({ en }) => {
                   <span className="d-flex align-items-center justify-content-center">
                     <img
                       style={{ width: "250px" }}
-                      className="m-1  border border-secondary"
+                      className="m-1  border border-secondary rounded"
+                      rounded
                       src="/images/save-and-budget/wireframes/Spendings.png"
                       alt="scetch"
                     />
@@ -255,7 +279,8 @@ const SaveAndBudgetApp = ({ en }) => {
                   <span className="d-flex align-items-center justify-content-center">
                     <img
                       style={{ width: "250px" }}
-                      className="m-1  border border-secondary"
+                      className="m-1  border border-secondary rounded"
+                      rounded
                       src="/images/save-and-budget/wireframes/savings.png"
                       alt="scetch"
                     />
@@ -263,7 +288,8 @@ const SaveAndBudgetApp = ({ en }) => {
                   <span className="d-flex align-items-center justify-content-center">
                     <img
                       style={{ width: "250px" }}
-                      className="m-1 border border-secondary"
+                      className="m-1 border border-secondary rounded"
+                      rounded
                       src="/images/save-and-budget/wireframes/Budget.png"
                       alt="scetch"
                     />
@@ -274,23 +300,28 @@ const SaveAndBudgetApp = ({ en }) => {
           </FadeInSection>
         </div>
 
-        <div id="usability">
+        <Section
+          key={"usability"}
+          sectionId={"usability"}
+          onSectionEnter={() => handleSectionChange("usability")}
+        />
+        <div id="usability" className="py-4">
           <FadeInSection>
-            <h4>Usability study</h4>
-            <div className="mb-3 row">
+            <h3>Usability study</h3>
+            <div className="my-3 row">
               <p>
                 I conducted usability study. Tests were conducted on wireframes.
               </p>
-              <h5>Usability study findings</h5>
+              <h4>Usability study findings</h4>
               <div className="col shadow p-3 m-3 bg-white rounded col">
-                <h6>Delete option in savings section</h6>
+                <h5>Delete option in savings section</h5>
                 <p>
                   Users missed the "delete" button to remove a savings category
                   they added but no longer wanted
                 </p>
               </div>
               <div className="col shadow p-3 m-3 bg-white rounded col">
-                <h6>Manage spending categories in the budget section</h6>
+                <h5>Manage spending categories in the budget section</h5>
                 <p>
                   Users find it frustrating that they cannot manage spending
                   categories in the budget section. They miss the ability to add
@@ -302,15 +333,21 @@ const SaveAndBudgetApp = ({ en }) => {
           </FadeInSection>
         </div>
 
-        <div id="final">
+        <Section
+          key={"final"}
+          sectionId={"final"}
+          onSectionEnter={() => handleSectionChange("final")}
+        />
+        <div id="final" className="py-4">
           <FadeInSection>
-            <h4>Final design</h4>
-            <div className="row mb-3">
-              <h5>Mockups - mobile app</h5>
+            <h3>Final design</h3>
+            <div className="row my-3">
+              <h4>Mockups - mobile app</h4>
               <div className="d-md-flex align-items-center justify-content-center">
                 <span className="d-flex align-items-center justify-content-center">
                   <img
-                    className="m-1 border border-secondary"
+                    className="m-1 border border-secondary rounded"
+                    rounded
                     style={{ width: "250px" }}
                     src="/images/save-and-budget/mocks/mobile/Dashboard.png"
                     alt="dashboard"
@@ -319,15 +356,17 @@ const SaveAndBudgetApp = ({ en }) => {
                 <span className="d-flex align-items-center justify-content-center">
                   <img
                     style={{ width: "250px" }}
-                    className="m-1 border border-secondary"
+                    className="m-1 border border-secondary rounded"
+                    rounded
                     src="/images/save-and-budget/mocks/mobile/Income.png"
                     alt="incomes page"
                   />
                 </span>
-                <span className="d-flex align-items-center justify-content-center">
+                <span className="d-flex align-items-center justify-content-center round">
                   <img
                     style={{ width: "250px" }}
-                    className="m-1  border border-secondary"
+                    className="m-1  border border-secondary rounded"
+                    rounded
                     src="/images/save-and-budget/mocks/mobile/Spendings.png"
                     alt="spendings page"
                   />
@@ -335,7 +374,8 @@ const SaveAndBudgetApp = ({ en }) => {
                 <span className="d-flex align-items-center justify-content-center">
                   <img
                     style={{ width: "250px" }}
-                    className="m-1  border border-secondary"
+                    className="m-1  border border-secondary rounded"
+                    rounded
                     src="/images/save-and-budget/mocks/mobile/savings.png"
                     alt="savings page"
                   />
@@ -343,7 +383,8 @@ const SaveAndBudgetApp = ({ en }) => {
                 <span className="d-flex align-items-center justify-content-center">
                   <img
                     style={{ width: "250px" }}
-                    className="m-1 border border-secondary"
+                    className="m-1 border border-secondary rounded"
+                    rounded
                     src="/images/save-and-budget/mocks/mobile/Budget.png"
                     alt="budget page"
                   />
@@ -353,8 +394,8 @@ const SaveAndBudgetApp = ({ en }) => {
           </FadeInSection>
 
           <FadeInSection>
-            <div className="mb-3">
-              <h5>High-fidelity prototyp - mobile app</h5>
+            <div className="my-3">
+              <h4>High-fidelity prototyp - mobile app</h4>
               <div className="d-flex align-items-center justify-content-center">
                 <div style={{ width: "90%" }}>
                   <a
@@ -375,13 +416,14 @@ const SaveAndBudgetApp = ({ en }) => {
           </FadeInSection>
 
           <FadeInSection>
-            <div className="row mb-3">
-              <h5>Mockups - responsive design of homepage</h5>
+            <div className="row my-3">
+              <h4>Mockups - responsive design of homepage</h4>
               <div className="d-md-flex align-items-center justify-content-center">
                 <span className="d-flex align-items-center justify-content-center">
                   <img
                     style={{ width: "250px" }}
-                    className="m-1 border border-secondary"
+                    className="m-1 border border-secondary rounded"
+                    rounded
                     src="/images/save-and-budget/mocks/Mobile.png"
                     alt="homepage mobile"
                   />
@@ -389,7 +431,8 @@ const SaveAndBudgetApp = ({ en }) => {
                 <span className="d-flex align-items-center justify-content-center">
                   <img
                     style={{ width: "350px" }}
-                    className="m-1  border border-secondary"
+                    className="m-1  border border-secondary rounded"
+                    rounded
                     src="/images/save-and-budget/mocks/tablet.png"
                     alt="homepage tablet"
                   />
@@ -397,7 +440,8 @@ const SaveAndBudgetApp = ({ en }) => {
                 <span className="d-flex align-items-center justify-content-center">
                   <img
                     style={{ width: "650px" }}
-                    className="m-1  border border-secondary"
+                    className="m-1  border border-secondary rounded"
+                    rounded
                     src="/images/save-and-budget/mocks/Desktop.png"
                     alt="homepage desktop"
                   />
@@ -407,9 +451,14 @@ const SaveAndBudgetApp = ({ en }) => {
           </FadeInSection>
         </div>
 
+        <Section
+          key={"conclusion"}
+          sectionId={"conclusion"}
+          onSectionEnter={() => handleSectionChange("conclusion")}
+        />
         <div id="conclusion">
           <FadeInSection>
-            <h4>Conclusion</h4>
+            <h3>Conclusion</h3>
             <p>
               {" "}
               <strong> What I learned</strong> I learned about the UX/UI process
@@ -422,9 +471,8 @@ const SaveAndBudgetApp = ({ en }) => {
           </FadeInSection>
         </div>
       </div>
-      <div className="p-2"></div>
       <Navbar
-        link={"/case-study/virtual-app"}
+        link={"/case-study/save-and-budget"}
         en={en && true}
         bgCol={"#e5e2db"}
       />
