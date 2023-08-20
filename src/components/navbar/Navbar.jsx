@@ -51,18 +51,6 @@ const Navbar = ({ bgCol, en, link }) => {
           <NavDropdown.Item href={`${link}/en`}>EN</NavDropdown.Item>
           <NavDropdown.Item href={link}>CZ</NavDropdown.Item>
         </NavDropdown>
-
-        {/* <Dropdown>
-          <Dropdown.Toggle variant="success" id="dropdown-basic">
-            <HiLanguage />
-            {en ? "en" : "cz"}
-          </Dropdown.Toggle>
-
-          <Dropdown.Menu>
-            <Dropdown.Item href={`${link}/en`}>En</Dropdown.Item>
-            <Dropdown.Item href={link}>Cz</Dropdown.Item>
-          </Dropdown.Menu>
-        </Dropdown> */}
       </span>
     </div>
   );
