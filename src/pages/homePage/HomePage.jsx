@@ -16,7 +16,7 @@ const HomePage = ({ en }) => {
               </div>
             </div>
             <div className="d-sm-none">
-              <h1>Markét Poláková</h1>
+              <h1>Markéta Poláková</h1>
             </div>
             {en ? (
               <p className=" pt-3 heading-line fade-in-delay">
