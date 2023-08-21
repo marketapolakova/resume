@@ -3,6 +3,7 @@ import DesignImageComponent from "../../components/imageComponent/DesignImageCom
 
 import PortfolioImageComponent from "../../components/imageComponent/PortfolioImageComponent";
 import Navbar from "../../components/navbar/Navbar";
+import NavbarMobile from "../../components/navbar/NavbarMobile";
 
 const PortfolioPage = ({ en }) => {
   const [show, setShow] = useState(false);
@@ -25,7 +26,7 @@ const PortfolioPage = ({ en }) => {
           handleClose={handleClose}
         />
       )}
-
+      <NavbarMobile en={en} link="/portfolio" />
       <div className="mx-5 my-5 pb-3">
         <h1 className="slide-in-right">Portfolio</h1>
         <div className="heading-line pb-4"></div>

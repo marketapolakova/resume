@@ -2,10 +2,12 @@ import React from "react";
 import ImageComponent from "../../components/imageComponent/ImageComponent";
 import "./HomePage.css";
 import Navbar from "../../components/navbar/Navbar";
+import NavbarMobile from "../../components/navbar/NavbarMobile";
 
 const HomePage = ({ en }) => {
   return (
     <div>
+      <NavbarMobile en={en} link={en ? "/" : ""} />
       <div className="homePage p-5">
         <div className="row m-5">
           <div className="col pt-5">

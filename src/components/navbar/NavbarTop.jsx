@@ -1,11 +1,18 @@
 import React from "react";
-import { Container, Nav, Navbar, Offcanvas } from "react-bootstrap";
+import {
+  Container,
+  Nav,
+  Navbar,
+  NavDropdown,
+  Offcanvas,
+} from "react-bootstrap";
 import "./navbar.css";
 
-const NavbarTop = ({ activeSection }) => {
+const NavbarTop = ({ activeSection, en, link }) => {
   return (
     <>
       <Navbar
+        closeButton
         fixed="top"
         key={"md"}
         expand={"md"}
@@ -13,8 +20,25 @@ const NavbarTop = ({ activeSection }) => {
         style={{ backgroundColor: "white" }}
       >
         <Container fluid>
-          <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${"md"}`} />
+          <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-md}`} />
+          <Offcanvas.Title
+            className="d-sm-none"
+            id={`offcanvasNavbarLabel-expand-md`}
+          >
+            <a
+              className=" col d-flex align-items-center"
+              href={`${en ? "/en" : "/"}`}
+            >
+              <img
+                style={{ width: "30px" }}
+                className=" border border-secondary rounded "
+                src="/images/logo.png"
+                alt="logo"
+              />
+            </a>
+          </Offcanvas.Title>
           <Navbar.Offcanvas>
+            <Offcanvas.Header closeButton></Offcanvas.Header>
             <Offcanvas.Body>
               <Nav className="justify-content-center flex-grow-1 pe-3">
                 <Nav.Link
@@ -81,6 +105,19 @@ const NavbarTop = ({ activeSection }) => {
               </Nav>
             </Offcanvas.Body>
           </Navbar.Offcanvas>
+          <div className="d-sm-none">
+            <div className="row py-2">
+              <span className="col d-flex align-items-center justify-content-end me-3">
+                <NavDropdown
+                  id="nav-dropdown-dark-example"
+                  title={en ? "EN" : "CZ"}
+                >
+                  <NavDropdown.Item href={`${link}/en`}>EN</NavDropdown.Item>
+                  <NavDropdown.Item href={link}>CZ</NavDropdown.Item>
+                </NavDropdown>
+              </span>
+            </div>
+          </div>
         </Container>
       </Navbar>
     </>

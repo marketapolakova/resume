@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../../components/navbar/Navbar";
+import NavbarMobile from "../../components/navbar/NavbarMobile";
 import Timeline from "../../components/timeline/Timeline";
 import { education, work, certification } from "../../data/resumeData";
 
@@ -24,6 +25,7 @@ const ResumePage = ({ en }) => {
   }, [en]);
   return (
     <div>
+      <NavbarMobile en={en} link="/resume" />
       <div className="mx-5 my-5">
         <h1 className="slide-in-right">Resume</h1>
         <div className="heading-line pb-4"></div>
