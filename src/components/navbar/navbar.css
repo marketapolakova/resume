@@ -8,3 +8,7 @@
   height: 80px; /* Zde nastavte výšku vaší navigace */
   margin: -80px 0 0; /* Záporný margin pro kompenzaci */
 }
+.navbar-nav {
+  max-height: 400px;
+  overflow-y: scroll;
+}
