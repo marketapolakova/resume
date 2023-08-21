@@ -12,7 +12,7 @@ import NavbarMobile from "../../components/navbar/NavbarMobile";
 const ContactPage = ({ en }) => {
   return (
     <div>
-      <NavbarMobile en={en} link="/contact" />
+      <NavbarMobile en={en && true} link="/contact" />
       <div className="homePage p-5">
         <div className="row m-5">
           <div className="col pt-5 slide-in-right ">

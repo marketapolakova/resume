@@ -5,7 +5,7 @@ const PortfolioImageComponent = ({ src, alt, en, btnName, delay }) => {
   return (
     <div className={`container fade-in-fwd${delay}`}>
       <div className="overlay">
-        <img className="my-1 portfolio" src={src} alt={alt} />
+        <img className="my-1 portfolio rounded" src={src} alt={alt} />
       </div>
 
       <div className="middle">

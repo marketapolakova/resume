@@ -15,7 +15,11 @@ const SaveAndBudgetApp = ({ en }) => {
 
   return (
     <div>
-      <NavbarTop activeSection={activeSection} />
+      <NavbarTop
+        activeSection={activeSection}
+        link={"/case-study/save-and-budget"}
+        en={en && true}
+      />
       <div className="container py-4 mx-5 my-5 py-4 ">
         <h1 className="slide-in-left">
           Cross-platform app to help adults in budgeting & saving money

@@ -26,7 +26,7 @@ const PortfolioPage = ({ en }) => {
           handleClose={handleClose}
         />
       )}
-      <NavbarMobile en={en} link="/portfolio" />
+      <NavbarMobile en={en && true} link="/portfolio" />
       <div className="mx-5 my-5 pb-3">
         <h1 className="slide-in-right">Portfolio</h1>
         <div className="heading-line pb-4"></div>

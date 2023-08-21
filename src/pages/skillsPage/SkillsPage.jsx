@@ -19,7 +19,7 @@ const SkillsPage = ({ en }) => {
   }, [en]);
   return (
     <div>
-      <NavbarMobile en={en} link="/skills" />
+      <NavbarMobile en={en && true} link="/skills" />
       <div className="mx-5 my-5">
         <h1 className="slide-in-right">{en ? "Skills" : "Dovednosti"}</h1>
         <div className="heading-line pb-4"></div>

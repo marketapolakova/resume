@@ -7,7 +7,7 @@ import NavbarMobile from "../../components/navbar/NavbarMobile";
 const HomePage = ({ en }) => {
   return (
     <div>
-      <NavbarMobile en={en} link={en ? "/" : ""} />
+      <NavbarMobile en={en && true} link={en ? "/" : ""} />
       <div className="homePage p-5">
         <div className="row m-5">
           <div className="col pt-5">

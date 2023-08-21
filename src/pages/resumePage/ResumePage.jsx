@@ -25,7 +25,7 @@ const ResumePage = ({ en }) => {
   }, [en]);
   return (
     <div>
-      <NavbarMobile en={en} link="/resume" />
+      <NavbarMobile en={en && true} link="/resume" />
       <div className="mx-5 my-5">
         <h1 className="slide-in-right">Resume</h1>
         <div className="heading-line pb-4"></div>

@@ -13,7 +13,11 @@ const DanceClasses = ({ en }) => {
   };
   return (
     <div>
-      <NavbarTop activeSection={activeSection} />
+      <NavbarTop
+        activeSection={activeSection}
+        link={"/case-study/dance-classes"}
+        en={en && true}
+      />
       <div className="container mx-5 my-5 py-4 ">
         <h1 className="slide-in-left">
           Website for finding and viewing dance classes

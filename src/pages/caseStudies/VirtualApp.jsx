@@ -14,7 +14,11 @@ const VirtualApp = ({ en }) => {
   return (
     <div>
       <div className="container mx-5 my-5 py-4 ">
-        <NavbarTop activeSection={activeSection} />
+        <NavbarTop
+          activeSection={activeSection}
+          link={"/case-study/virtual-app"}
+          en={en && true}
+        />
         <h1 className="slide-in-left"> Virtual tour app for art gallery</h1>
         <div className="heading-line pb-4"></div>
         <Section

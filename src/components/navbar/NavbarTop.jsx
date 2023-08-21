@@ -38,7 +38,10 @@ const NavbarTop = ({ activeSection, en, link }) => {
             </a>
           </Offcanvas.Title>
           <Navbar.Offcanvas>
-            <Offcanvas.Header closeButton></Offcanvas.Header>
+            <Offcanvas.Header
+              className="d-flex justify-content-end"
+              closeButton
+            ></Offcanvas.Header>
             <Offcanvas.Body>
               <Nav className="justify-content-center flex-grow-1 pe-3">
                 <Nav.Link
