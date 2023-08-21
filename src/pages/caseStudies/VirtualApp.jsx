@@ -11,10 +11,12 @@ const VirtualApp = ({ en }) => {
   const handleSectionChange = (sectionId) => {
     setActiveSection(sectionId);
   };
+
   return (
     <div>
       <div className="container mx-5 my-5 py-4 ">
         <NavbarTop
+          setActiveSection={setActiveSection}
           activeSection={activeSection}
           link={"/case-study/virtual-app"}
           en={en && true}
