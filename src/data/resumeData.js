@@ -51,6 +51,12 @@ export const certification = {
       date: "3. května 2021",
       link: "https://www.udemy.com/certificate/UC-122338b3-9e80-444e-994b-399f0c5830ed/",
     },
+    {
+      field: "Google UX Design Professional Certificate",
+      organization: "Google (Coursea)",
+      date: "21. srpna 2023",
+      link: "https://www.coursera.org/account/accomplishments/specialization/certificate/LX87LAQH7HNE",
+    },
   ],
   en: [
     {
@@ -64,6 +70,12 @@ export const certification = {
       organization: "Udemy",
       date: "May 3, 2021",
       link: "https://www.udemy.com/certificate/UC-122338b3-9e80-444e-994b-399f0c5830ed/",
+    },
+    {
+      field: "Google UX Design Professional Certificate",
+      organization: "Google (Coursea)",
+      date: "August 21, 2023",
+      link: "https://www.coursera.org/account/accomplishments/specialization/certificate/LX87LAQH7HNE",
     },
   ],
 };

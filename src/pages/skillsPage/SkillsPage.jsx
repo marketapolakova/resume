@@ -39,11 +39,12 @@ const SkillsPage = ({ en }) => {
             })}
           </div>
           <div className="col">
-            <h4>UI</h4>
+            <h4>UX/UI</h4>
             <hr />
             {ui.map((skills, index) => {
               return (
                 <Skills
+                  size={skills?.size}
                   key={index}
                   skills={skills.name}
                   icon={skills.icon}

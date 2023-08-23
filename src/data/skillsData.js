@@ -47,6 +47,48 @@ export const ui = [
     name: "Adobe XD",
     icon: "https://cdn-icons-png.flaticon.com/512/5968/5968593.png",
   },
+  {
+    name: "Wireframes",
+    icon: "https://thenounproject.com/api/private/icons/1194495/edit/?backgroundShape=SQUARE&backgroundShapeColor=%23000000&backgroundShapeOpacity=0&exportSize=752&flipX=false&flipY=false&foregroundColor=%23000000&foregroundOpacity=1&imageFormat=png&rotation=0",
+    size: true,
+  },
+  {
+    name: "Mockups",
+    icon: "https://thenounproject.com/api/private/icons/5109927/edit/?backgroundShape=SQUARE&backgroundShapeColor=%23000000&backgroundShapeOpacity=0&exportSize=752&flipX=false&flipY=false&foregroundColor=%23000000&foregroundOpacity=1&imageFormat=png&rotation=0",
+    size: true,
+  },
+  {
+    name: "Prototypes",
+    icon: "https://thenounproject.com/api/private/icons/4643209/edit/?backgroundShape=SQUARE&backgroundShapeColor=%23000000&backgroundShapeOpacity=0&exportSize=752&flipX=false&flipY=false&foregroundColor=%23000000&foregroundOpacity=1&imageFormat=png&rotation=0",
+    size: true,
+  },
+  {
+    name: "Personas",
+    icon: "https://img.icons8.com/?size=512&id=61161&format=png",
+  },
+  {
+    name: "Empathy maps",
+    icon: "https://img.icons8.com/?size=512&id=KopKrL8YgVZm&format=png",
+  },
+  {
+    name: "User stories",
+    icon: "https://img.icons8.com/?size=512&id=KCGR1hgGBpwC&format=png",
+  },
+  {
+    name: "User journey maps",
+    icon: "https://thenounproject.com/api/private/icons/3302679/edit/?backgroundShape=SQUARE&backgroundShapeColor=%23000000&backgroundShapeOpacity=0&exportSize=752&flipX=false&flipY=false&foregroundColor=%23000000&foregroundOpacity=1&imageFormat=png&rotation=0",
+    size: true,
+  },
+  {
+    name: "User pain points",
+    icon: "https://thenounproject.com/api/private/icons/4562696/edit/?backgroundShape=SQUARE&backgroundShapeColor=%23000000&backgroundShapeOpacity=0&exportSize=752&flipX=false&flipY=false&foregroundColor=%23000000&foregroundOpacity=1&imageFormat=png&rotation=0",
+    size: true,
+  },
+  {
+    name: "Competitive audits",
+    icon: "https://thenounproject.com/api/private/icons/5833943/edit/?backgroundShape=SQUARE&backgroundShapeColor=%23000000&backgroundShapeOpacity=0&exportSize=752&flipX=false&flipY=false&foregroundColor=%23000000&foregroundOpacity=1&imageFormat=png&rotation=0",
+    size: true,
+  },
 ];
 export const office = [
   {
