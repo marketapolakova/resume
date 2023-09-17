@@ -40,6 +40,12 @@ export const education = {
 export const certification = {
   cz: [
     {
+      field: "Google UX Design Professional Certificate",
+      organization: "Google (Coursea)",
+      date: "21. srpna 2023",
+      link: "https://www.coursera.org/account/accomplishments/specialization/certificate/LX87LAQH7HNE",
+    },
+    {
       field: "User Experience Design Essentials - Adobe XD UI UX Design",
       organization: "Udemy",
       date: "1. června 2021",
@@ -50,12 +56,6 @@ export const certification = {
       organization: "Udemy",
       date: "3. května 2021",
       link: "https://www.udemy.com/certificate/UC-122338b3-9e80-444e-994b-399f0c5830ed/",
-    },
-    {
-      field: "Google UX Design Professional Certificate",
-      organization: "Google (Coursea)",
-      date: "21. srpna 2023",
-      link: "https://www.coursera.org/account/accomplishments/specialization/certificate/LX87LAQH7HNE",
     },
   ],
   en: [
