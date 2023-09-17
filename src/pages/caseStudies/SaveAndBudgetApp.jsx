@@ -428,7 +428,7 @@ const SaveAndBudgetApp = ({ en }) => {
                     style={{ width: "250px" }}
                     className="m-1 border border-secondary rounded"
                     rounded
-                    src="/images/save-and-budget/mocks/Mobile.png"
+                    src="/images/save-and-budget/mocks/mobile.png"
                     alt="homepage mobile"
                   />
                 </span>

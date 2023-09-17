@@ -149,6 +149,24 @@ const PortfolioPage = ({ en }) => {
                 onClick={() => {
                   handleShow();
                   setImg({
+                    src: "/images/cv-tom.png",
+                    alt: "Tomáš Štorc website resume",
+                  });
+                }}
+              >
+                {" "}
+                <PortfolioImageComponent
+                  delay={delayc}
+                  en={en && en}
+                  src="/images/cv-tom-crop.png"
+                  alt="Tomáš Štorc website resume"
+                />
+              </div>
+              <div
+                className="col s-col-12"
+                onClick={() => {
+                  handleShow();
+                  setImg({
                     src: "/images/0067- Hotel Booking.png",
                     alt: "Hotel Booking",
                   });
@@ -162,6 +180,8 @@ const PortfolioPage = ({ en }) => {
                   alt="Hotel Booking"
                 />
               </div>
+            </div>
+            <div className="row">
               <div
                 className="col s-col-12"
                 onClick={() => {
@@ -180,10 +200,9 @@ const PortfolioPage = ({ en }) => {
                   alt="Press Page"
                 />
               </div>
-            </div>
-            <div className="row">
+
               <div
-                className="col col-12"
+                className="col s-col-12"
                 onClick={() => {
                   handleShow();
                   setImg({
@@ -200,6 +219,8 @@ const PortfolioPage = ({ en }) => {
                   alt="Testimonials"
                 />
               </div>
+            </div>
+            <div className="row">
               <div
                 className="col s-col-12"
                 onClick={() => {
