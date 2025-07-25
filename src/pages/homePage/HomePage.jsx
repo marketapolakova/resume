@@ -43,6 +43,7 @@ const HomePage = ({ en }) => {
             <ImageComponent className="p-2" />
           </div>
         </div>
+
         <Navbar link={en ? "/" : ""} en={en && true} bgCol={"#fff"} />
       </div>
     </div>
