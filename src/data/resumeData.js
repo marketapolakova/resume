@@ -3,7 +3,8 @@ export const education = {
     {
       organization: "Unicorn University",
       field: "Softwarový vývoj",
-      date: "září 2021 - teď",
+      date: "září 2021 - Září 2024",
+      aditon: "Bakalářský titul",
     },
     {
       organization: "Vysoká škola obchodní",
@@ -21,7 +22,8 @@ export const education = {
     {
       organization: "Unicorn University",
       field: "Software development",
-      date: "September 2021 - now",
+      date: "September 2021 - September 2024",
+      aditon: "Bachelor's degree",
     },
     {
       organization: "Vysoká škola obchodní",
