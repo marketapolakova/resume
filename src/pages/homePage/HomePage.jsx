@@ -13,12 +13,13 @@ const HomePage = ({ en }) => {
           <div className="col pt-5">
             <div className="d-none d-sm-block">
               <h1 className="heading slide-in-left ">Markéta</h1>
-              <div className="px-5 mx-5">
-                <h1 className="px-5 pb-3 heading slide-in-right ">Poláková</h1>
-              </div>
+
+              <h1 className="pt-1 mt-4 ms-5 heading slide-in-right ">
+                Štorc Poláková
+              </h1>
             </div>
             <div className="d-sm-none">
-              <h1>Markéta Poláková</h1>
+              <h1>Markéta Štorc Poláková</h1>
             </div>
             {en ? (
               <p className=" pt-3 heading-line fade-in-delay">
