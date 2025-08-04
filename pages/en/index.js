@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
-import HomePage from "./homePage/HomePage";
+import HomePage from "../homePage/HomePage";
 
 function App() {
   const { locale } = useRouter();
