@@ -21,6 +21,7 @@ const SkillsPage = () => {
       setTranslate({ other: other.en, ui: ui.en });
     }
   }, [en]);
+
   return (
     <div>
       <NavbarMobile en={en && true} link="/skills" />
@@ -61,7 +62,7 @@ const SkillsPage = () => {
               );
             })}
           </section>
-          <section className="col">
+          {/* <section className="col">
             <h4>Microsoft office</h4>
             <hr />
             {office.map((skills, index) => {
@@ -74,7 +75,7 @@ const SkillsPage = () => {
                 />
               );
             })}
-          </section>
+          </section> */}
           <section className="col">
             <h4>{en ? "Other" : "Ostatní"}</h4>
             <hr />

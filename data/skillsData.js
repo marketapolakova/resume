@@ -1,5 +1,9 @@
 export const frontend = [
   {
+    name: "React",
+    icon: "https://cdn-icons-png.flaticon.com/512/3393/3393920.png",
+  },
+  {
     name: "HTML",
     icon: "https://cdn-icons-png.flaticon.com/512/1051/1051328.png",
   },
@@ -15,10 +19,7 @@ export const frontend = [
     name: "TypeScript",
     icon: "https://cdn-icons-png.flaticon.com/512/5968/5968566.png",
   },
-  {
-    name: "React",
-    icon: "https://cdn-icons-png.flaticon.com/512/3393/3393920.png",
-  },
+
   {
     name: "Redux",
     icon: "https://img.icons8.com/material-rounded/384/redux.png",
@@ -26,6 +27,18 @@ export const frontend = [
   {
     name: "Bootstrap",
     icon: "https://cdn-icons-png.flaticon.com/512/5968/5968671.png",
+  },
+  {
+    name: "React Hook Form",
+    icon: "",
+  },
+  {
+    name: "TanStack Query",
+    icon: "",
+  },
+  {
+    name: "Zod",
+    icon: "",
   },
 ];
 export const cms = [
@@ -50,17 +63,17 @@ export const ui = {
     },
     {
       name: "Wireframes",
-      icon: "https://thenounproject.com/api/private/icons/1194495/edit/?backgroundShape=SQUARE&backgroundShapeColor=%23000000&backgroundShapeOpacity=0&exportSize=752&flipX=false&flipY=false&foregroundColor=%23000000&foregroundOpacity=1&imageFormat=png&rotation=0",
+      icon: "",
       size: true,
     },
     {
       name: "Mockups",
-      icon: "https://thenounproject.com/api/private/icons/5109927/edit/?backgroundShape=SQUARE&backgroundShapeColor=%23000000&backgroundShapeOpacity=0&exportSize=752&flipX=false&flipY=false&foregroundColor=%23000000&foregroundOpacity=1&imageFormat=png&rotation=0",
+      icon: "",
       size: true,
     },
     {
       name: "Prototypes",
-      icon: "https://thenounproject.com/api/private/icons/4643209/edit/?backgroundShape=SQUARE&backgroundShapeColor=%23000000&backgroundShapeOpacity=0&exportSize=752&flipX=false&flipY=false&foregroundColor=%23000000&foregroundOpacity=1&imageFormat=png&rotation=0",
+      icon: "",
       size: true,
     },
     {
@@ -77,17 +90,17 @@ export const ui = {
     },
     {
       name: "User journey maps",
-      icon: "https://thenounproject.com/api/private/icons/3302679/edit/?backgroundShape=SQUARE&backgroundShapeColor=%23000000&backgroundShapeOpacity=0&exportSize=752&flipX=false&flipY=false&foregroundColor=%23000000&foregroundOpacity=1&imageFormat=png&rotation=0",
+      icon: "",
       size: true,
     },
     {
       name: "User pain points",
-      icon: "https://thenounproject.com/api/private/icons/4562696/edit/?backgroundShape=SQUARE&backgroundShapeColor=%23000000&backgroundShapeOpacity=0&exportSize=752&flipX=false&flipY=false&foregroundColor=%23000000&foregroundOpacity=1&imageFormat=png&rotation=0",
+      icon: "",
       size: true,
     },
     {
       name: "Competitive audits",
-      icon: "https://thenounproject.com/api/private/icons/5833943/edit/?backgroundShape=SQUARE&backgroundShapeColor=%23000000&backgroundShapeOpacity=0&exportSize=752&flipX=false&flipY=false&foregroundColor=%23000000&foregroundOpacity=1&imageFormat=png&rotation=0",
+      icon: "",
       size: true,
     },
   ],
@@ -102,17 +115,17 @@ export const ui = {
     },
     {
       name: "Wireframes",
-      icon: "https://thenounproject.com/api/private/icons/1194495/edit/?backgroundShape=SQUARE&backgroundShapeColor=%23000000&backgroundShapeOpacity=0&exportSize=752&flipX=false&flipY=false&foregroundColor=%23000000&foregroundOpacity=1&imageFormat=png&rotation=0",
+      icon: "",
       size: true,
     },
     {
       name: "Mockupy",
-      icon: "https://thenounproject.com/api/private/icons/5109927/edit/?backgroundShape=SQUARE&backgroundShapeColor=%23000000&backgroundShapeOpacity=0&exportSize=752&flipX=false&flipY=false&foregroundColor=%23000000&foregroundOpacity=1&imageFormat=png&rotation=0",
+      icon: "",
       size: true,
     },
     {
       name: "Prototypy",
-      icon: "https://thenounproject.com/api/private/icons/4643209/edit/?backgroundShape=SQUARE&backgroundShapeColor=%23000000&backgroundShapeOpacity=0&exportSize=752&flipX=false&flipY=false&foregroundColor=%23000000&foregroundOpacity=1&imageFormat=png&rotation=0",
+      icon: "",
       size: true,
     },
     {
@@ -129,17 +142,17 @@ export const ui = {
     },
     {
       name: "User journey maps",
-      icon: "https://thenounproject.com/api/private/icons/3302679/edit/?backgroundShape=SQUARE&backgroundShapeColor=%23000000&backgroundShapeOpacity=0&exportSize=752&flipX=false&flipY=false&foregroundColor=%23000000&foregroundOpacity=1&imageFormat=png&rotation=0",
+      icon: "",
       size: true,
     },
     {
       name: "User pain points",
-      icon: "https://thenounproject.com/api/private/icons/4562696/edit/?backgroundShape=SQUARE&backgroundShapeColor=%23000000&backgroundShapeOpacity=0&exportSize=752&flipX=false&flipY=false&foregroundColor=%23000000&foregroundOpacity=1&imageFormat=png&rotation=0",
+      icon: "",
       size: true,
     },
     {
       name: "Konkurenční audit",
-      icon: "https://thenounproject.com/api/private/icons/5833943/edit/?backgroundShape=SQUARE&backgroundShapeColor=%23000000&backgroundShapeOpacity=0&exportSize=752&flipX=false&flipY=false&foregroundColor=%23000000&foregroundOpacity=1&imageFormat=png&rotation=0",
+      icon: "",
       size: true,
     },
   ],

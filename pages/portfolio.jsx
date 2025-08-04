@@ -231,7 +231,7 @@ const PortfolioPage = () => {
                 onClick={() => {
                   handleShow();
                   setImg({
-                    src: "/images/0043- Food:Drink Menu.png",
+                    src: "/images/0043- FoodDrinkMenu.png",
                     alt: "Menu",
                   });
                 }}
