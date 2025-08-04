@@ -1,0 +1,8 @@
+.navbarLine {
+  border-right: 1px black solid;
+}
+
+.navbar-nav {
+  max-height: 400px;
+  overflow-y: scroll;
+}

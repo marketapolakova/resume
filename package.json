@@ -23,6 +23,17 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "stylelint": {
+    "extends": [
+      "stylelint-config-standard"
+    ],
+    "ignoreFiles": [
+      "**/*.js",
+      "**/*.jsx",
+      "**/*.ts",
+      "**/*.tsx"
+    ]
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
