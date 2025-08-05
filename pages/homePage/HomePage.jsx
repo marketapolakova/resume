@@ -12,14 +12,14 @@ const HomePage = ({ en }) => {
       {/* hlavní obsah */}
       <main className={`${styles.homePage} p-5`}>
         <div className="row m-5">
-          <div className="col pt-5">
-            <div className="d-none d-sm-block">
+          <div className="col-md-6 pt-5">
+            <div className="d-none d-lg-block d-xl-block">
               <h1 className="heading slide-in-left">Markéta</h1>
               <h1 className="pt-1 mt-4 ms-5 heading slide-in-right">
                 Štorc Poláková
               </h1>
             </div>
-            <div className="d-sm-none">
+            <div className="d-lg-none d-xl-none">
               <h1>Markéta Štorc Poláková</h1>
             </div>
 
@@ -38,14 +38,17 @@ const HomePage = ({ en }) => {
             </p>
           </div>
 
-          <section className="col d-flex flex-row-reverse fade-in">
-            <Image
-              className="imageSquare rounded"
-              src="/images/profilePic2.jpg"
-              width={400}
-              height={400}
-              alt="Portrait of Markéta Štorc Poláková"
-            />
+          <section className="col-md-6 d-flex flex-row-reverse fade-in">
+            <div style={{ maxWidth: 500, width: "100%" }}>
+              <Image
+                src="/images/profilePic2.jpg"
+                width={600}
+                height={600}
+                style={{ width: "100%", height: "auto" }}
+                className="imageSquare rounded"
+                alt="Portrait of Markéta Štorc Poláková"
+              />
+            </div>
           </section>
         </div>
       </main>
