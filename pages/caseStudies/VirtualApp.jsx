@@ -1,3 +1,4 @@
+import { useRouter } from "next/router";
 import React, { useState } from "react";
 import FadeInSection from "../../components/caseStudiesSections/FadeInSection";
 import Section from "../../components/caseStudiesSections/Section";
@@ -5,9 +6,10 @@ import PortfolioImageComponent from "../../components/imageComponent/PortfolioIm
 import Navbar from "../../components/navbar/Navbar";
 import NavbarTop from "../../components/navbar/NavbarTop";
 
-const VirtualApp = ({ en }) => {
+const VirtualApp = () => {
   const [activeSection, setActiveSection] = useState("about");
-
+  const { locale } = useRouter();
+  const en = locale === "en";
   const handleSectionChange = (sectionId) => {
     setActiveSection(sectionId);
   };
@@ -18,7 +20,7 @@ const VirtualApp = ({ en }) => {
         <header>
           <NavbarTop
             activeSection={activeSection}
-            link={"/case-study/virtual-app"}
+            link={"/caseStudies/VirtualApp"}
             en={en && true}
           />
           <h1 className="slide-in-left"> Virtual tour app for art gallery</h1>
@@ -496,7 +498,7 @@ const VirtualApp = ({ en }) => {
       </div>
 
       <Navbar
-        link={"/case-study/virtual-app"}
+        link={"/caseStudies/VirtualApp"}
         en={en && true}
         bgCol={"#e5e2db"}
       />

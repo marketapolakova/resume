@@ -1,3 +1,4 @@
+import { useRouter } from "next/router";
 import React, { useState } from "react";
 import FadeInSection from "../../components/caseStudiesSections/FadeInSection";
 import Section from "../../components/caseStudiesSections/Section";
@@ -6,9 +7,10 @@ import PortfolioImageComponent from "../../components/imageComponent/PortfolioIm
 import Navbar from "../../components/navbar/Navbar";
 import NavbarTop from "../../components/navbar/NavbarTop";
 
-const SaveAndBudgetApp = ({ en }) => {
+const SaveAndBudgetApp = () => {
   const [activeSection, setActiveSection] = useState("about");
-
+  const { locale } = useRouter();
+  const en = locale === "en";
   const handleSectionChange = (sectionId) => {
     setActiveSection(sectionId);
   };
@@ -19,7 +21,7 @@ const SaveAndBudgetApp = ({ en }) => {
         <header>
           <NavbarTop
             activeSection={activeSection}
-            link={"/case-study/save-and-budget"}
+            link={"/caseStudies/SaveAndBudgetApp"}
             en={en && true}
           />
           <h1 className="slide-in-left">
@@ -483,7 +485,7 @@ const SaveAndBudgetApp = ({ en }) => {
         </main>
       </div>
       <Navbar
-        link={"/case-study/save-and-budget"}
+        link={"/caseStudies/SaveAndBudgetApp"}
         en={en && true}
         bgCol={"#e5e2db"}
       />

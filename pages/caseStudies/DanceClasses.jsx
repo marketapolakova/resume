@@ -1,3 +1,4 @@
+import { useRouter } from "next/router";
 import React, { useState } from "react";
 import FadeInSection from "../../components/caseStudiesSections/FadeInSection";
 import Section from "../../components/caseStudiesSections/Section";
@@ -6,9 +7,10 @@ import PortfolioImageComponent from "../../components/imageComponent/PortfolioIm
 import Navbar from "../../components/navbar/Navbar";
 import NavbarTop from "../../components/navbar/NavbarTop";
 
-const DanceClasses = ({ en }) => {
+const DanceClasses = () => {
   const [activeSection, setActiveSection] = useState("about");
-
+  const { locale } = useRouter();
+  const en = locale === "en";
   const handleSectionChange = (sectionId) => {
     setActiveSection(sectionId);
   };
@@ -18,7 +20,7 @@ const DanceClasses = ({ en }) => {
         <header>
           <NavbarTop
             activeSection={activeSection}
-            link={"/case-study/dance-classes"}
+            link={"/caseStudies/DanceClasses"}
             en={en && true}
           />
           <h1 className="slide-in-left">
@@ -565,7 +567,7 @@ const DanceClasses = ({ en }) => {
       </div>
 
       <Navbar
-        link={"/case-study/dance-classes"}
+        link={"/caseStudies/DanceClasses"}
         en={en && true}
         bgCol={"#e5e2db"}
       />

@@ -95,7 +95,7 @@ const PortfolioPage = () => {
             <div style={{ width: "70%" }}>
               <a
                 href={`${
-                  en ? "/caseStudies/VirtualApp/en" : "/caseStudies/VirtualApp"
+                  en ? "/en/caseStudies/VirtualApp" : "/caseStudies/VirtualApp"
                 }`}
               >
                 <PortfolioImageComponent
@@ -114,7 +114,7 @@ const PortfolioPage = () => {
             <a
               href={`${
                 en
-                  ? "/caseStudies/DanceClasses/en"
+                  ? "/en/caseStudies/DanceClasses"
                   : "/caseStudies/DanceClasses"
               }`}
             >
@@ -129,7 +129,7 @@ const PortfolioPage = () => {
             <a
               href={`${
                 en
-                  ? "/caseStudies/SaveAndBudgetApp/en"
+                  ? "/en/caseStudies/SaveAndBudgetApp"
                   : "/caseStudies/SaveAndBudgetApp"
               }`}
             >
