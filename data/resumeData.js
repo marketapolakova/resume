@@ -42,6 +42,31 @@ export const education = {
 export const certification = {
   cz: [
     {
+      field: "The Complete SQL Bootcamp: Go from Zero to Hero",
+      organization: "Udemy",
+      date: "19. ledna 2026",
+      link: "https://www.udemy.com/certificate/UC-3b9354f9-67b4-411e-9fba-41ddc8a7671a/?utm_campaign=email&utm_medium=email&utm_source=sendgrid.com",
+    },
+
+    {
+      field: "Business Analysis Fundamentals - IIBA endorsed",
+      organization: "Udemy",
+      date: "8. ledna 2026",
+      link: "https://www.udemy.com/certificate/UC-9e50f239-485c-41d8-98b8-32e887e8a44d/?utm_campaign=email&utm_medium=email&utm_source=sendgrid.com",
+    },
+    {
+      field: "UML and Object-Oriented Design Foundation",
+      organization: "Udemy",
+      date: "16. prosince 2025",
+      link: "https://www.udemy.com/certificate/UC-b2cb9ca9-2bef-4039-ad22-dd9c4d96f66d/?utm_campaign=email&utm_medium=email&utm_source=sendgrid.com",
+    },
+    {
+      field: "Mastering Data Modeling Fundamentals",
+      organization: "Udemy",
+      date: "11. prosince 2025",
+      link: "https://www.udemy.com/certificate/UC-2a462988-cb05-42a6-a016-348fc0d24ff2/?utm_campaign=email&utm_medium=email&utm_source=sendgrid.com",
+    },
+    {
       field: "Google UX Design Professional Certificate",
       organization: "Google (Coursea)",
       date: "21. srpna 2023",
@@ -62,6 +87,37 @@ export const certification = {
   ],
   en: [
     {
+      field: "The Complete SQL Bootcamp: Go from Zero to Hero",
+      organization: "Udemy",
+      date: "January 19 2026",
+      link: "https://www.udemy.com/certificate/UC-3b9354f9-67b4-411e-9fba-41ddc8a7671a/?utm_campaign=email&utm_medium=email&utm_source=sendgrid.com",
+    },
+
+    {
+      field: "Business Analysis Fundamentals - IIBA endorsed",
+      organization: "Udemy",
+      date: "January 8 2026",
+      link: "https://www.udemy.com/certificate/UC-9e50f239-485c-41d8-98b8-32e887e8a44d/?utm_campaign=email&utm_medium=email&utm_source=sendgrid.com",
+    },
+    {
+      field: "UML and Object-Oriented Design Foundation",
+      organization: "Udemy",
+      date: "December 16 2025",
+      link: "https://www.udemy.com/certificate/UC-b2cb9ca9-2bef-4039-ad22-dd9c4d96f66d/?utm_campaign=email&utm_medium=email&utm_source=sendgrid.com",
+    },
+    {
+      field: "Mastering Data Modeling Fundamentals",
+      organization: "Udemy",
+      date: "December 11 2025",
+      link: "https://www.udemy.com/certificate/UC-2a462988-cb05-42a6-a016-348fc0d24ff2/?utm_campaign=email&utm_medium=email&utm_source=sendgrid.com",
+    },
+    {
+      field: "Google UX Design Professional Certificate",
+      organization: "Google (Coursea)",
+      date: "August 21, 2023",
+      link: "https://www.coursera.org/account/accomplishments/specialization/certificate/LX87LAQH7HNE",
+    },
+    {
       field: "User Experience Design Essentials - Adobe XD UI UX Design",
       organization: "Udemy",
       date: "June 1, 2021",
@@ -72,12 +128,6 @@ export const certification = {
       organization: "Udemy",
       date: "May 3, 2021",
       link: "https://www.udemy.com/certificate/UC-122338b3-9e80-444e-994b-399f0c5830ed/",
-    },
-    {
-      field: "Google UX Design Professional Certificate",
-      organization: "Google (Coursea)",
-      date: "August 21, 2023",
-      link: "https://www.coursera.org/account/accomplishments/specialization/certificate/LX87LAQH7HNE",
     },
   ],
 };

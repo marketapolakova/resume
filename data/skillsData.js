@@ -174,6 +174,10 @@ export const office = [
 export const other = {
   cz: [
     {
+      name: "SQL",
+      icon: "https://cdn-icons-png.flaticon.com/128/5815/5815809.png",
+    },
+    {
       name: "Jira",
       icon: "https://cdn-icons-png.flaticon.com/512/5968/5968842.png",
     },
@@ -195,6 +199,10 @@ export const other = {
     },
   ],
   en: [
+    {
+      name: "SQL",
+      icon: "https://cdn-icons-png.flaticon.com/128/5815/5815809.png",
+    },
     {
       name: "Jira",
       icon: "https://cdn-icons-png.flaticon.com/512/5968/5968842.png",
