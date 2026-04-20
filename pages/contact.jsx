@@ -38,10 +38,20 @@ const ContactPage = () => {
               </a>
             </p>
             <p className="fs-6 lh pt-3 ">
-              <BsLinkedin /> <a href="http://">LinkedIn</a>
+              <BsLinkedin />{" "}
+              <a
+                href="https://www.linkedin.com/in/mark%C3%A9ta-%C5%A1torc-pol%C3%A1kov%C3%A1-aa19451b5/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                LinkedIn
+              </a>
             </p>{" "}
             <p className="fs-6 lh pt-3 ">
-              <BsGithub /> <a href="http://">GitHub</a>
+              <BsGithub />{" "}
+              <a href="https://github.com/marketapolakova" target="_blank" rel="noreferrer">
+                GitHub
+              </a>
             </p>
           </main>
         </div>

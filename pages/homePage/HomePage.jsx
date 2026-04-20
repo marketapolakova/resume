@@ -25,16 +25,8 @@ const HomePage = ({ en }) => {
 
             <p className="pt-3 heading-line fade-in-delay">
               {en
-                ? `I graduated in tourism, but during the pandemic, I found an
-                  interest in the IT sector. For this reason, I decided to change
-                  my focus and start studying software development at a
-                  university. Currently, I work at Unicorn company as a frontend
-                  developer.`
-                : `Vystudovala jsem cestovní ruch, ale v období pandemie jsem našla
-                  zálibu v IT odvětví. Z tohoto důvodu, jsem se rozhodla změnit
-                  zaměření a zahájit studium oboru softwarový vývoj na vysoké
-                  škole. Aktuálně pracuji ve společnosti Unicorn na pozici
-                  frontend developer.`}
+                ? `Hi, I'm Markéta — a frontend developer with 3+ years of experience building web applications with React and TypeScript. I combine frontend skills with UX/UI thinking — from wireframes in Figma to production-ready code. Currently exploring the world of Python, LLM engineering, and agentic AI — because great frontend is just the beginning.`
+                : `Jsem Markéta — frontend developerka s 3+ lety zkušeností s tvorbou webových aplikací v Reactu a TypeScriptu. Spojuji frontend dovednosti s UX/UI přístupem — od návrhu ve Figmě až po produkční kód. Aktuálně prozkoumávám svět Pythonu, LLM engineeringu a agentní AI — protože skvělý frontend je teprve začátek.`}
             </p>
           </div>
 

@@ -134,9 +134,14 @@ export const certification = {
 export const work = {
   cz: [
     {
+      organization: "Trask",
+      field: "Frontend Developer",
+      date: "březen 2025 - teď",
+    },
+    {
       organization: "Unicorn",
       field: "Frontend Developer",
-      date: "září 2022 - teď",
+      date: "září 2022 - únor 2025",
     },
     {
       organization: "ČSOB",
@@ -156,9 +161,14 @@ export const work = {
   ],
   en: [
     {
+      organization: "Trask",
+      field: "Frontend Developer",
+      date: "March 2025 - present",
+    },
+    {
       organization: "Unicorn",
       field: "Frontend Developer",
-      date: "September 2022 - now",
+      date: "September 2022 - February 2025",
     },
     {
       organization: "ČSOB",
